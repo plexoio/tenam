@@ -67,7 +67,7 @@ Our insights are grounded in thorough research, as substantiated by the accompan
 |     RSS information   |           3            |        3         |       1        |
 |     Add, Delete, Update |         5            |        5         |       1        |
 |       N. Items        |                        |                  |       9        |
-|      Max. Points      |           5            x        5         |       45       |
+|      Max. Points      |                        |                  |   5 * 9 = 45   |
 |        Results        |           40           |        36        |                |
 |      Percentage       | 88.88% <br> (Strategy) | 80% <br> (Scope) |                |
 

@@ -4,8 +4,10 @@ from modules.portfolio import Portfolio, Google_Sheet # author's
 from modules.account import User, Asset, Taxation # author's
 from modules.data_analysis import Data_Analysis # author's
 from modules.transaction import Transaction # author's
+from modules.login import *
 
 user = SHEET.worksheet('user')
 data = user.get_all_values()
 
 print(data)
+login_input()

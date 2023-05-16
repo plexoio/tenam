@@ -1,6 +1,9 @@
+from modules.google_sheets import *  # third-part
+
+
 class User(object):
     '''
-    For one part of the main object instance
+    Deal with user login validation
     '''
 
     def __init__(self, username, password):
@@ -9,15 +12,20 @@ class User(object):
         self.username = username
         self.password = password
 
-    def user_login(self):
-        '''
-        '''
-        print(f'{self.username} start login now with {self.password}')
-
     def user_validation(self):
         '''
         '''
-        print('Validation Starts')
+        list_of_dicts = [dict(zip(user_titles, row)) for row in title_values]
+        for dic in list_of_dicts:
+            for key, value in dic.items():
+                if value == self.username:
+                    print('passed username')
+                elif value == self.password:
+                    print('passed password')
+                else:
+                    print('did not match')
+        print(
+            f'You have logged in with the following data:\n{self.username}\n{self.password}')
 
 
 class Asset(object):
@@ -27,6 +35,7 @@ class Asset(object):
 
     def __init__(self, currency, value, sheet_name):
         print()
+
 
 class Taxation(object):
     '''

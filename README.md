@@ -150,13 +150,13 @@ For more details on our `Interactive Experience Design (IXD)` for the `Tenam Pro
 
 ![IXD Mindmap](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/IXD.png)
 
-We made sure to use the right `keywords` when navigating the site promoting assertiveness in users' decisions. We guarantee that users will get the best out of our site.
+In navigating the site, we aim to promote efficent users' decision-making by providing familiar vocabulary and clear instructions. We assure users that they can maximize the potential of our MVP.
 
-We understand that sites like ours can often have an overload of information. However, in our case, everything is `easy` to understand and `straightforward`.
+We recognize that a command-line interface can pose challenges for some users. However, in our case, we've made every effort to ensure that all interactions are easy to understand and straightforward.
 
-It's important to consider both `IXD` (Interaction Experience Design) and `IAD` (Information Architecture Design) to have a clear mental view of the product.
+It's crucial to consider both IXD (Interaction Experience Design) and IAD (Information Architecture Design) to achieve a comprehensive mental model of the product.
 
-For more details on our `Information Architecture Design IAD` for the Bitplexo Prototype/Demo Project, please refer to the attached mind map.
+For more detailed insights into our `Information Architecture Design (IAD)` for the `Tenam Prototype/Demo Project`, please refer to the attached mind map.
 
 ![IAD Mindmap Initial](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/initial-IAD.png)
 
@@ -166,4 +166,4 @@ For more details on our `Information Architecture Design IAD` for the Bitplexo P
   
 ![IAD Mindmap](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/IAD.png)
 
-In this first iteration, we know exactly what we want, what we need, and what's good for us: The `IXD` and `IAD` provided us with the necessary pieces to work with, enabling us to achieve our goals with this incredible project. Now we can move forward to the `Skeleton plane`.
+In this initial iteration, we have a clear understanding of our desires, requirements, and what is beneficial for us. The IXD and IAD supplied us with the essential components to work with, empowering us to reach our objectives with this remarkable project. We can now proceed to the Skeleton plane and start building from this point forward.

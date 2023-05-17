@@ -25,6 +25,7 @@ class Google_Portfolio(object):
         Allow instance variables
         '''
         self.user_active = []  # For Welcoming
+        self.asset = Asset()  # Calling Asset class
         self.assets_active = []  # for Menu
 
     def get_user(self, username, password):
@@ -37,17 +38,16 @@ class Google_Portfolio(object):
         '''
         Welcome user before opening Menu (appears above it)
         '''
-        print(f'Welcome to your dashboard {self.user_active[0]}!')
+        print(f'Welcome to your dashboard {self.user_active[0]}!\n')
 
     def menu(self):
         '''
         Represents the instance of the whole app navigation
         '''
-        print('Menu:\n1.Assets\n2.Transaction\n3.Taxation\n4.Data Analysis')
+        print('Menu:\n\n1.Assets\n2.Transaction\n3.Taxation\n4.Data Analysis\n')
 
         # Menu Variables
-        asset = Asset()  # Calling Asset class
-        current_pairs = asset.assets_display()  # Getting class function
+        current_pairs = self.asset.assets_display()  # Getting class function
         self.assets_active.append(current_pairs)  # Storing the values we need
 
         # InputF

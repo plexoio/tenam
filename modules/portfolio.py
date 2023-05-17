@@ -69,6 +69,7 @@ class User(object):
 
     def __init__(self, username, password):
         '''
+        Defining instance variables to use for login validation
         '''
         self.username = username
         self.password = password

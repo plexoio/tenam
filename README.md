@@ -91,3 +91,80 @@ Features that scored 4 or above, such as `Transaction History`, will definitely 
 Based on these percentages, we can develop our overall strategy by considering the relevancy and viability of the features. This information will guide us in planning the upcoming `scope`, as these factors are interconnected.
 
 With this information in mind, we can now proceed to the next stage, which is defining the `scope` of our project.
+
+## Scope Plane <a name="scope-plane"></a> | [#](#index)
+
+Python posed a significant challenge, particularly due to the mental strain that the last two projects exerted. The timeframes were exceedingly short, leaving us with hardly any room to breathe or fully assimilate the information. However, we remained steadfast in our belief in simplicity while aiming to deliver a project that was not only demonstrative but also fully functional. Our strategy allowed us to visualize what we could achieve given the constraints of time, technology, and resources.
+
+For this iteration, we decided to incorporate features and functionalities under the following conditions and goals:
+
+
+|Condition|Iteration|Goals|
+|---|---|---|
+|Limited use|Data Analysis<br>Transaction History<br>RSS News<br>Taxation|Culture acquisition|
+|Simple design|Portfolio Display<br>Menu<br>Login<br>Welcome<br>Add, Delete, Update|Tech Showcase|
+|Low leading rates<br>& Non-functional| RSS News|Long-term Investment<br>& Future Implementation|
+
+
+As we can observe, the first three items on our list are the most achievable. We plan to draft the starting points for those tagged as future implementation to ensure clarity, enhance user experience, and effectively communicate our message.
+
+The entire development process is slated to span five days, with the initial design for future implementation not exceeding one day.
+
+In this iteration, our focus is on pragmatism to meet the requirements of both the Code Institute and the project at hand.
+
+We have thoroughly analyzed crucial elements at every stage of our research for "Useful, Sellable, Buildable" – taking into account objectives, functional and non-functional requirements, business rules, future implementation possibilities, and much more.
+
+As per our User Story table, users have the ability to:
+
+**Note:** In this context, "subject" refers to a user, prospect, or stakeholder.
+
+### User Story
+
+| Scenario                                      | Solution                                                                               |
+| --------------------------------------------- | -------------------------------------------------------------------------------------- |
+| User seeks a crypto portfolio tracker         | User finds the command-line interface                                                  |
+| User realizes there isn't a connection yet    | User understands this is an MVP iteration for demonstration purposes                   |
+| User wants to learn more about the app        | User discovers the app's functionality by logging in and exploring                      |
+| User wants to test each feature               | User finds the menu section presenting all essential entry points                      |
+| User wants to know more about Blockchain      | User finds an RSS functionality designed for this purpose                               |
+                                                                                     |
+
+Consequently, we have aligned our Scope with the findings derived from our research in the Strategy phase. It is evident at this point that the intention is to implement a Minimum Viable Product (MVP) iteration. This will effectively aid us in establishing the foundations for our ensuing stage, namely Structure.
+
+## Structure Plane <a name="structure-plane"></a> | [#](#index)
+
+This project is designed for everyone, although the level of difficulty may primarily cater to users with `accessibility` issues. The entire operation runs on a command-line interface that is highly user-friendly and straightforward, making it easy to understand the concept and actual functionalities.
+
+In terms of navigation, we opted not to compile a list of rules as it wouldn't serve our project's purpose. Instead, users will find a `Menu section` as soon as they log in. This design ensures that users can effortlessly navigate, identify their current location within the application, comprehend the available actions, and determine their potential next steps.
+
+Our `Gitmind` mind maps vividly illustrate the different state changes, from the welcome page to the various features of the MVP app.
+
+As always, we have `prioritized` consistency, predictability, learnability, visibility, and feedback to ensure a positive user experience.
+
+For more details on our `Interactive Experience Design (IXD)` for the `Tenam Prototype/Demo Project`, please refer to the attached mind map.
+
+![IXD Mindmap Initial](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/IXDini.png)
+
+- [IXD Live Mindmap](https://gitmind.com/app/docs/m1k5arpj)
+
+- [IXD Live Outline](https://gitmind.com/app/docs/m1k5arpj?view=outline)
+
+![IXD Mindmap](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/IXD.png)
+
+We made sure to use the right `keywords` when navigating the site promoting assertiveness in users' decisions. We guarantee that users will get the best out of our site.
+
+We understand that sites like ours can often have an overload of information. However, in our case, everything is `easy` to understand and `straightforward`.
+
+It's important to consider both `IXD` (Interaction Experience Design) and `IAD` (Information Architecture Design) to have a clear mental view of the product.
+
+For more details on our `Information Architecture Design IAD` for the Bitplexo Prototype/Demo Project, please refer to the attached mind map.
+
+![IAD Mindmap Initial](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/initial-IAD.png)
+
+- [IAD Live Mindmap](https://gitmind.com/app/docs/me6xknis)
+
+- [IAD Live Outline](https://gitmind.com/app/docs/me6xknis?view=outline)
+  
+![IAD Mindmap](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/IAD.png)
+
+In this first iteration, we know exactly what we want, what we need, and what's good for us: The `IXD` and `IAD` provided us with the necessary pieces to work with, enabling us to achieve our goals with this incredible project. Now we can move forward to the `Skeleton plane`.

@@ -15,6 +15,10 @@ GSPREAD_CLIENT = gspread.authorize(SCOPE_CREDS)
 SHEET = GSPREAD_CLIENT.open('portfolio')
 
 
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
 class Google_Portfolio(object):
     '''
     Main portfolio instances
@@ -44,22 +48,27 @@ class Google_Portfolio(object):
         '''
         Represents the instance of the whole app navigation
         '''
-        print('Menu:\n\n1.Assets\n2.Transaction\n3.Taxation\n4.Data Analysis\n')
+        menu_list = 'Menu:\n\n1.Assets\n2.Transaction\n3.Data Analysis\n4.Taxation\n5.RSS News\n6.Return\n'
 
         # Menu Variables
         current_pairs = self.asset.assets_display()  # Getting class function
         self.assets_active.append(current_pairs)  # Storing the values we need
-
-        # InputF
-        menu_input = int(input('Type index number: '))
-
-        # Conditions of the Input
-        if menu_input == 1:
-            pairs = self.assets_active[0]
-            for asset in pairs:
-                print(asset)
-        else:
-            print('Did not print anything!')
+        while True:
+            print(menu_list)
+            menu_input = input('Type index number: ')
+            if menu_input == '1':
+                clear_screen()
+                pairs = self.assets_active[0]
+                print('Your current assets: \n')
+                for asset in pairs:
+                    print(f'{asset}\n')
+                print('RSS news: GOES HERE! \n')
+            elif menu_input == 'Return':
+                clear_screen()
+                self.menu() # recursion here
+            else:
+                clear_screen()
+                print('Value not supported try again!')
 
 
 class User(object):
@@ -89,7 +98,7 @@ class User(object):
         for dic in list_of_dicts:
             if dic.get('username') == self.username and dic.get('password') == self.password:
                 print('passed username and password')
-                os.system('cls' if os.name == 'nt' else 'clear')
+                clear_screen()
                 portfolio = Google_Portfolio()
                 portfolio.get_user(self.username, self.password)
                 portfolio.welcome_user()

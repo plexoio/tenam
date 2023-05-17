@@ -1,13 +1,65 @@
-class Portfolio(object):
-    '''
-    Hold general functions and variables for any portfolio
-    '''
-    def __init__(self, user):
-        print()
+import gspread
+from google.oauth2.service_account import Credentials
 
-class Google_Sheet(Portfolio):
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+]
+
+# Credentials
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPE_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPE_CREDS)
+SHEET = GSPREAD_CLIENT.open('portfolio')
+
+class Google_Portfolio(object):
     '''
-    Main object instance using Google Sheets (final portfolio)
+    Object Portfolio
     '''
-    def __init__(self, user, sheet_name):
-        print()
+
+    def __init__(self):
+        self.user_active = []
+
+    def get_user(self, username, password):
+        self.user_active.append(User(username, password))
+
+    def welcome_user(self):
+        print(f'Welcome to your dashboard {self.user_active[0]}!')
+
+
+class User(object):
+    '''
+    Deal with user login validation
+    '''
+
+    def __init__(self, username, password):
+        '''
+        '''
+        self.username = username
+        self.password = password
+
+    def user_validation(self):
+        '''
+        Handles user validation comparing Google Sheet and user input data
+        '''
+        # Login Variables and Data: Used in 'account.py' module at 'User' class
+        user = SHEET.worksheet('user')
+        data = user.get_all_values()
+        user_titles = data[0]
+        title_values = data[1:]
+
+        list_of_dicts = [dict(zip(user_titles, row)) for row in title_values]
+
+        for dic in list_of_dicts:
+            if dic.get('username') == self.username and dic.get('password') == self.password:
+                print('passed username and password')
+                portfolio = Google_Portfolio()
+                portfolio.get_user(self.username, self.password)
+                portfolio.welcome_user()
+            else:
+                print(
+                    f'{self.username} OR {self.password} did not match with our records')
+
+    def __repr__(self):
+        return self.username

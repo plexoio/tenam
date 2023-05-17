@@ -127,9 +127,8 @@ As per our User Story table, users have the ability to:
 | User wants to learn more about the app        | User discovers the app's functionality by logging in and exploring                      |
 | User wants to test each feature               | User finds the menu section presenting all essential entry points                      |
 | User wants to know more about Blockchain      | User finds an RSS functionality designed for this purpose                               |
-                                                                                     |
 
-Consequently, we have aligned our Scope with the findings derived from our research in the Strategy phase. It is evident at this point that the intention is to implement a Minimum Viable Product (MVP) iteration. This will effectively aid us in establishing the foundations for our ensuing stage, namely Structure.
+Consequently, we have aligned our Scope with the findings derived from our research in the Strategy phase. It is evident at this point that the intention is to implement a Minimum Viable Product (MVP) iteration. This will effectively aid us in establishing the foundations for our next stage, `Structure`.
 
 ## Structure Plane <a name="structure-plane"></a> | [#](#index)
 
@@ -143,7 +142,7 @@ As always, we have `prioritized` consistency, predictability, learnability, visi
 
 For more details on our `Interactive Experience Design (IXD)` for the `Tenam Prototype/Demo Project`, please refer to the attached mind map.
 
-![IXD Mindmap Initial](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/IXDini.png)
+![IXD Mindmap Initial](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/initial-IXD.png)
 
 - [IXD Live Mindmap](https://gitmind.com/app/docs/m1k5arpj)
 

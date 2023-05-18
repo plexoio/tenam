@@ -36,7 +36,6 @@ class Google_Portfolio(object):
         Allow instance variables for composition
         '''
         # Local Variables
-        self.user_active = []  # For Welcome message
 
         self.asset = Asset()  # Asset instance for Menu
         self.assets_active = []
@@ -50,23 +49,11 @@ class Google_Portfolio(object):
         self.taxation = Get_Taxation()  # Taxation instance for Menu
         self.taxation_active = []
 
-    def get_user(self, username, password):
-        '''
-        Append 'Username' & 'Password' to the upper instance variable
-        '''
-        self.user_active.append(User(username, password))
-
-    def welcome_user(self):
-        '''
-        Welcome user before opening Menu (appears above it)
-        '''
-        print(f'Welcome to your dashboard {self.user_active[0]}!\n')
-
     def menu(self):
         '''
         Represents the instance of the whole app navigation
         '''
-        menu_list = 'Menu:\n\n1.Assets\n2.Transaction\n3.Data Analysis\n4.Taxation\n5.RSS News\n6.Return\n'
+        menu_list = 'Menu:\n\n1.Assets\n2.Transaction\n3.Data Analysis\n4.Taxation\n5.Update Tax Value\n6.RSS News\n7.Return\n'
 
         # Assembling variables for Menu
 
@@ -93,7 +80,6 @@ class Google_Portfolio(object):
 
         # STORE Taxation's values for menu
         self.taxation_active.append(current_taxation)
-
         # MENU starts
         while True:
 
@@ -124,13 +110,19 @@ class Google_Portfolio(object):
                     print(f'{my_data}')
                 print(f'{margin}RSS news: GOES HERE! \n')
 
-            elif menu_input == '4':  # Taxation
+            elif menu_input == '4':  # Actual Tax Taxation
                 clear_screen()
                 taxation_data = int(self.taxation_active[0][0])
                 print(f'In this section you can visualize the mount of taxes you have input\nwhen initiating the application, and the subsequent calculations\nwill be based on that input:\n')
                 print(f'Your tax responsability value is: {taxation_data}%\n')
-
-            elif menu_input == 'Return':
+            
+            elif menu_input == '5':
+                tax = int(input('How much taxes do you pay in percentage?: '))
+                if tax >= 0:
+                    taxation = Taxation(tax)
+                    taxation.assigning_tax()
+                    print('\nPlease, restart application to load results!\n')
+            elif menu_input == '7':
                 clear_screen()
                 self.menu()  # Recursion here
 
@@ -167,22 +159,12 @@ class User(object):
         # Data processing
         for dic in list_of_dicts:
             if dic.get('username') == self.username and dic.get('password') == self.password:
-                print('passed username and password')
-                clear_screen()
-                portfolio = Google_Portfolio()
-                portfolio.get_user(self.username, self.password)
-                portfolio.welcome_user()
+                pass
             else:
                 print(
                     f'{self.username} OR {self.password} did not match with our records')
                 return False
         return True
-
-    def __repr__(self):
-        '''
-        Using this single variable for Object representation used for composition on the Google_Sheet class
-        '''
-        return self.username
 
 
 class Asset(object):
@@ -248,10 +230,23 @@ class Data_Analysis(object):
     Part of the main object instance (Google_Sheet)
     '''
 
+    def __init__(self):
+        # Local Variables
+        self.taxation = Get_Taxation()  # Taxation instance for analysis
+        self.taxation_active = []
+
     def my_data_analysis(self):
         '''
         Fetch Data Analysis data from Google Sheet to compose Google_Sheet class
         '''
+        # Assembling data from Google Sheets
+
+        # GET Taxation's class function
+        current_taxation = self.taxation.my_tax()
+
+        # STORE Taxation's values for menu
+        self.taxation_active.append(current_taxation)
+
         # Google Sheets
         data_analysis = SHEET.worksheet('data_analysis')
         my_analysis = data_analysis.get_all_values()
@@ -274,33 +269,29 @@ class Data_Analysis(object):
 
         # Data Analysis Variables
 
-        purchase_price = []
-        actual_price = []
-        # tax = []
-        tax_pay = []
-
+        # purchase_price = []
+        # actual_price = []
+        # tax_pay = []
+        taxation_data = int(self.taxation_active[0][0])
+        push_data = SHEET.worksheet('data_analysis')
+        i = 2
         # Data processing
         for pairs in analysis_dic:
             self.currency = pairs.get('currency')
-            self.old_price = pairs.get('old_price')
-            self.new_price = pairs.get('new_price')
-            # self.tax = pairs.get('tax')
-            self.pay_tax = pairs.get('pay_tax')
+            self.old_price = int(pairs.get('old_price'))
+            self.new_price = int(pairs.get('new_price'))
             self.profit = pairs.get('profit')
-            purchase_price.append(self.old_price)
-            actual_price.append(self.new_price)
-            # tax.append(self.tax)
-            tax_pay.append(self.pay_tax)
-            analysis_pairs.append(
-                f'{margin}{my_currencies}{self.currency}\n{my_old_price}{self.old_price}$\n{my_new_price}{self.new_price}$\n{my_tax}{self.pay_tax}\n{my_profit}{self.profit}')
+            
+            old_price = self.old_price
+            new_price = self.new_price
+            tax_pay = new_price * taxation_data / 100
+            new_earn = new_price - tax_pay - old_price
 
-        # Data Analysis Calculations
-        pp = [int(p) for p in purchase_price]
-        ap = [int(a) for a in actual_price]
-        print(pp)
-        print(ap)
-        # print(t)
-        # print(tp)
+            push_data.update(f'D{i}', tax_pay)
+            push_data.update(f'E{i}', new_earn)
+            i += 1
+            analysis_pairs.append(
+                f'{margin}{my_currencies}{self.currency}\n{my_old_price}{self.old_price}$\n{my_new_price}{self.new_price}$\n{my_tax}: {taxation_data}%\n{my_pay_tax}: {tax_pay}')
         return analysis_pairs
 
 
@@ -314,8 +305,10 @@ class Taxation(object):
         self.to_tax = SHEET.worksheet('taxation')
 
     def assigning_tax(self):
+        clear_screen()
+        print('Data uploading to server...')
         self.to_tax.update('A2', self.tax)
-        print('Uploading data to server...')
+        print('Data uploaded to server successfully!')
 
 
 class Get_Taxation(object):

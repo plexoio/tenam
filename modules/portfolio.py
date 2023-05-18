@@ -22,6 +22,10 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
+# Global variables
+margin = f'----------------------------\n'
+
+
 class Google_Portfolio(object):
     '''
     Main portfolio as object instance, receiving composition
@@ -29,7 +33,7 @@ class Google_Portfolio(object):
 
     def __init__(self):
         '''
-        Allow instance variables
+        Allow instance variables for composition
         '''
         # Local Variables
         self.user_active = []  # For Welcome message
@@ -39,6 +43,9 @@ class Google_Portfolio(object):
 
         self.transaction = Transaction()  # Transaction instance for Menu
         self.transactions_active = []
+
+        self.data_analysis = Data_Analysis()
+        self.data_analysis_active= []
 
     def get_user(self, username, password):
         '''
@@ -58,25 +65,33 @@ class Google_Portfolio(object):
         '''
         menu_list = 'Menu:\n\n1.Assets\n2.Transaction\n3.Data Analysis\n4.Taxation\n5.RSS News\n6.Return\n'
 
-        # Local Variables
-        current_pairs = self.asset.assets_display()  # Get Asset class function
-        margin_menu = f'----------------------------\n'
+        # Assembling variables for Menu
 
-        # Store Asset's values values for menu
+        # GET Asset's class function
+        current_pairs = self.asset.assets_display()  # Get Asset class function
+
+        # STORE Asset's values values for menu
         self.assets_active.append(current_pairs)
 
-        # Get Transaction class function
+        # GET Transaction class function
         current_transactions = self.transaction.my_transactions()
 
-        # Store Transaction's values for menu
+        # STORE Transaction's values for menu
         self.transactions_active.append(current_transactions)
 
+        # GET Data_Analysis's class function
+        current_data_analysis = self.data_analysis.my_data_analysis()
+
+        # STORE Data_Analysis's values for menu
+        self.data_analysis_active.append(current_data_analysis)
+
+        # MENU starts
         while True:
 
             print(menu_list)
             menu_input = input('Type index number: ')
 
-            if menu_input == '1':
+            if menu_input == '1': # Asset
                 clear_screen()
                 pairs = self.assets_active[0]
                 print('Your current assets: \n')
@@ -84,13 +99,21 @@ class Google_Portfolio(object):
                     print(f'{asset}\n')
                 print('RSS news: GOES HERE! \n')
 
-            elif menu_input == '2':
+            elif menu_input == '2': # Transaction
                 clear_screen()
                 t_paris = self.transactions_active[0]
                 print('Your last 6 transactions: \n')
                 for transaction in t_paris:
                     print(f'{transaction}')
-                print(f'{margin_menu}RSS news: GOES HERE! \n')
+                print(f'{margin}RSS news: GOES HERE! \n')
+            
+            elif menu_input == '3': # Data Analysis
+                clear_screen()
+                data_pairs = self.data_analysis_active[0]
+                print(f"In this section, you'll have the ability to view your current asset portfolio.\nThe amount, prices, and associated taxes of each asset will be provided\nto help you analyze your potential profits and ascertain your tax obligations:\n")
+                for my_data in data_pairs:
+                    print(f'{my_data}')
+                print(f'{margin}RSS news: GOES HERE! \n')
 
             elif menu_input == 'Return':
                 clear_screen()
@@ -195,21 +218,85 @@ class Transaction(object):
         transaction_pairs = []
 
         # Data processing
-        margin_transaction = f'----------------------------\n'
         for pairs in transactions_dic:
             self.currency = pairs.get('currency')
             self.txid = pairs.get('txid')
             self.status = pairs.get('status')
             self.amount = pairs.get('amount')
             transaction_pairs.append(
-                f'{margin_transaction}{self.currency}: {self.amount}\n\n Status: {self.status}\n\nTxID: {self.txid}')
+                f'{margin}{self.currency}: {self.amount}\n\n Status: {self.status}\n\nTxID: {self.txid}')
         return transaction_pairs
+
+
+class Data_Analysis(object):
+    '''
+    Part of the main object instance (Google_Sheet)
+    '''
+
+    def my_data_analysis(self):
+        '''
+        Fetch Data Analysis data from Google Sheet to compose Google_Sheet class
+        '''
+        # Google Sheets
+        data_analysis = SHEET.worksheet('data_analysis')
+        my_analysis = data_analysis.get_all_values()
+        title_analysis = my_analysis[0]
+        analysis_values = my_analysis[1:]
+
+        # Internal Sorting
+
+        analysis_dic = [dict(zip(title_analysis, rows))
+                        for rows in analysis_values]
+        analysis_pairs = []
+
+        # local variables
+        my_currencies = '- Currency: '
+        my_old_price = '- Purchase Price: '
+        my_new_price = '- Actual Price: '
+        my_tax = '- Tax Responsibility: '
+        my_pay_tax = '- Tax to pay: '
+        my_profit = '- Calculated profit: '
+
+        # Data Analysis Variables
+
+        purchase_price = []
+        actual_price = []
+        #tax = []
+        tax_pay =[]
+
+        # Data processing
+        for pairs in analysis_dic:
+            self.currency = pairs.get('currency')
+            self.old_price = pairs.get('old_price')
+            self.new_price = pairs.get('new_price')
+            # self.tax = pairs.get('tax')
+            self.pay_tax = pairs.get('pay_tax')
+            self.profit = pairs.get('profit')
+            purchase_price.append(self.old_price)
+            actual_price.append(self.new_price)
+            #tax.append(self.tax)
+            tax_pay.append(self.pay_tax)
+            analysis_pairs.append(
+                f'{margin}{my_currencies}{self.currency}\n{my_old_price}{self.old_price}$\n{my_new_price}{self.new_price}$\n{my_tax}{self.pay_tax}\n{my_profit}{self.profit}')
+        
+        # Data Analysis Calculations
+        pp = [int(p) for p in purchase_price]
+        ap = [int(a) for a in actual_price]
+        print(pp)
+        print(ap)
+        #print(t)
+        #print(tp)
+        return analysis_pairs
 
 
 class Taxation(object):
     '''
     Part of the main object instance (Google_Sheet)
     '''
+    def __init__(self, tax):
+        self.tax = tax
 
-    def __init__(self, value, sheet_name):
-        print()
+    def assigning_tax(self):
+        to_tax = SHEET.worksheet('taxation')
+        to_tax.update('A2', [[self.tax]])
+        print('worked!')

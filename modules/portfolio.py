@@ -44,8 +44,11 @@ class Google_Portfolio(object):
         self.transaction = Transaction()  # Transaction instance for Menu
         self.transactions_active = []
 
-        self.data_analysis = Data_Analysis()
-        self.data_analysis_active= []
+        self.data_analysis = Data_Analysis()  # Data Analysis instance for Menu
+        self.data_analysis_active = []
+
+        self.taxation = Get_Taxation()  # Taxation instance for Menu
+        self.taxation_active = []
 
     def get_user(self, username, password):
         '''
@@ -85,13 +88,19 @@ class Google_Portfolio(object):
         # STORE Data_Analysis's values for menu
         self.data_analysis_active.append(current_data_analysis)
 
+        # GET Taxation's class function
+        current_taxation = self.taxation.my_tax()
+
+        # STORE Taxation's values for menu
+        self.taxation_active.append(current_taxation)
+
         # MENU starts
         while True:
 
             print(menu_list)
             menu_input = input('Type index number: ')
 
-            if menu_input == '1': # Asset
+            if menu_input == '1':  # Asset
                 clear_screen()
                 pairs = self.assets_active[0]
                 print('Your current assets: \n')
@@ -99,21 +108,27 @@ class Google_Portfolio(object):
                     print(f'{asset}\n')
                 print('RSS news: GOES HERE! \n')
 
-            elif menu_input == '2': # Transaction
+            elif menu_input == '2':  # Transaction
                 clear_screen()
                 t_paris = self.transactions_active[0]
                 print('Your last 6 transactions: \n')
                 for transaction in t_paris:
                     print(f'{transaction}')
                 print(f'{margin}RSS news: GOES HERE! \n')
-            
-            elif menu_input == '3': # Data Analysis
+
+            elif menu_input == '3':  # Data Analysis
                 clear_screen()
                 data_pairs = self.data_analysis_active[0]
                 print(f"In this section, you'll have the ability to view your current asset portfolio.\nThe amount, prices, and associated taxes of each asset will be provided\nto help you analyze your potential profits and ascertain your tax obligations:\n")
                 for my_data in data_pairs:
                     print(f'{my_data}')
                 print(f'{margin}RSS news: GOES HERE! \n')
+
+            elif menu_input == '4':  # Taxation
+                clear_screen()
+                taxation_data = int(self.taxation_active[0][0])
+                print(f'In this section you can visualize the mount of taxes you have input\nwhen initiating the application, and the subsequent calculations\nwill be based on that input:\n')
+                print(f'Your tax responsability value is: {taxation_data}%\n')
 
             elif menu_input == 'Return':
                 clear_screen()
@@ -261,8 +276,8 @@ class Data_Analysis(object):
 
         purchase_price = []
         actual_price = []
-        #tax = []
-        tax_pay =[]
+        # tax = []
+        tax_pay = []
 
         # Data processing
         for pairs in analysis_dic:
@@ -274,18 +289,18 @@ class Data_Analysis(object):
             self.profit = pairs.get('profit')
             purchase_price.append(self.old_price)
             actual_price.append(self.new_price)
-            #tax.append(self.tax)
+            # tax.append(self.tax)
             tax_pay.append(self.pay_tax)
             analysis_pairs.append(
                 f'{margin}{my_currencies}{self.currency}\n{my_old_price}{self.old_price}$\n{my_new_price}{self.new_price}$\n{my_tax}{self.pay_tax}\n{my_profit}{self.profit}')
-        
+
         # Data Analysis Calculations
         pp = [int(p) for p in purchase_price]
         ap = [int(a) for a in actual_price]
         print(pp)
         print(ap)
-        #print(t)
-        #print(tp)
+        # print(t)
+        # print(tp)
         return analysis_pairs
 
 
@@ -293,10 +308,28 @@ class Taxation(object):
     '''
     Part of the main object instance (Google_Sheet)
     '''
+
     def __init__(self, tax):
         self.tax = tax
+        self.to_tax = SHEET.worksheet('taxation')
 
     def assigning_tax(self):
-        to_tax = SHEET.worksheet('taxation')
-        to_tax.update('A2', [[self.tax]])
-        print('worked!')
+        self.to_tax.update('A2', self.tax)
+        print('Uploading data to server...')
+
+
+class Get_Taxation(object):
+    '''
+    Part of the main object instance (Google_Sheet)
+    '''
+
+    def my_tax(self):
+        '''
+        Fetch Taxation data from Google Sheet to compose Google_Sheet class
+        '''
+        # Google Sheets
+        my_tax = SHEET.worksheet('taxation')
+        display_tax = my_tax.get_all_values()
+        title_taxation = display_tax[0]
+        taxation_values = display_tax[1]
+        return taxation_values

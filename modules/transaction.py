@@ -2,6 +2,7 @@ class Transaction(object):
     '''
     Part of the main object instance (Google_Sheet)
     '''
+
     def __init__(self, sheet):
         self.sheet = sheet
 

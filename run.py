@@ -1,28 +1,20 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
-
-# Global variables
 import time  # built-in module for adding time.sleep() function to allow users read feedback
-from getpass import getpass  # Built-in module for hiding password
-import textwrap  # Wrapper library to make sure text don't exceed 80 chrs
-import feedparser  # Importing module after 'pip install feedparser' library
-# Importing from google's module
+from getpass import getpass  # built-in module for hiding password
+import textwrap  # wrapper library to make sure text don't exceed 80 chrs
+import feedparser  # importing module after 'pip install feedparser' library
+# importing from google's module
 from google.oauth2.service_account import Credentials
 import gspread  # google's library for Google Spread Sheet
-from modules.clear_screen import clear_screen
-from modules.taxation import Taxation, Get_Taxation
-from modules.data_analysis import Data_Analysis
-from modules.transaction import Transaction
-from modules.asset import Asset
+# author's module to clear command-line
+from modules.utilities import clear_screen
+from modules.taxation import Taxation, Get_Taxation  # author's module
+from modules.data_analysis import Data_Analysis  # author's module
+from modules.transaction import Transaction  # author's module
+from modules.asset import Asset  # author's module
 margin = f'----------------------------\n'
 
-# Author's module
-
-# Third party libraries and modules for GOOGLE
-
-# Third party module and library for RSS
-
-# Built-in modules
-
+# Const for Google Sheets
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -182,6 +174,9 @@ class Google_Portfolio(object):
             elif menu_input == '7':
                 clear_screen()
 
+            elif menu_input == "8":
+                print('You have been disconnected!')
+                return
             else:
                 clear_screen()
                 print('Value not supported just yet, try again!\n')
@@ -240,10 +235,10 @@ def login_input():
             print('Loading enviroment for you, almost there!')
             time.sleep(2)
             clear_screen()
-            print('Login successful!')
+            print('Login successful! Almost there...')
             break
 
 
 login_input()  # call login
-menu = Google_Portfolio()  # After login launch Menu
+menu = Google_Portfolio()  # After login successfully launch Menu
 menu.menu(SHEET)

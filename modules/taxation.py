@@ -1,9 +1,11 @@
-from modules.clear_screen import clear_screen
+from modules.utilities import clear_screen
+
 
 class Taxation(object):
     '''
     Part of the main object instance (Google_Sheet)
     '''
+
     def __init__(self, tax, sheet):
         '''
         Initializing instance variables for tax processing

@@ -1,5 +1,6 @@
 from modules.taxation import Taxation, Get_Taxation
 
+
 class Data_Analysis(object):
     '''
     Part of the main object instance (Google_Sheet)

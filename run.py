@@ -10,6 +10,7 @@ from modules.taxation import Taxation, Get_Taxation
 from modules.data_analysis import Data_Analysis
 from modules.transaction import Transaction
 from modules.asset import Asset
+from modules.welcome import welcome_users
 
 margin = f'----------------------------\n'
 
@@ -23,8 +24,6 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPE_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPE_CREDS)
 SHEET = GSPREAD_CLIENT.open('portfolio')
-
-# continue with your code...
 
 
 class Google_Portfolio(object):
@@ -94,8 +93,9 @@ class Google_Portfolio(object):
                '?outputType=xml')
 
         menu_list = (
-            '\nMenu section:\n\n1. Assets\n2. Transaction\n3. Data Analysis'
-            '\n4. Taxation\n5. Update Tax Value\n6. RSS News\n7. Refresh\n')
+            'Menu section:\n\n1. Assets\n2. Transaction\n3. Data Analysis'
+            '\n4. Taxation\n5. Update Tax Value\n6. RSS News\n7. Refresh\n'
+            '8. Exit')
 
         # GET Asset's class function
         # Get Asset class function
@@ -232,13 +232,13 @@ def login_input():
 
         if login.user_validation():
             clear_screen()
-            print('Loading enviroment for you, almost there!')
+            print('Loading enviroment for you, almost...')
             time.sleep(2)
             clear_screen()
-            print('Login successful! Almost there...')
+            print('State: Login successful!\n')
             break
 
 
-login_input()  # call login
+welcome_users(login_input)
 menu = Google_Portfolio()  # After login successfully launch Menu
 menu.menu(SHEET)

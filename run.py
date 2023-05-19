@@ -123,6 +123,7 @@ class Google_Portfolio(object):
 
             if menu_input == '1':  # Asset
                 pairs = self.assets_active[0]
+                print(separator)
                 print('Your current assets: \n')
                 for asset in pairs:
                     print(f'{asset}\n')
@@ -147,6 +148,7 @@ class Google_Portfolio(object):
 
             elif menu_input == '4':  # Actual Tax Taxation
                 taxation_data = int(self.taxation_active[0][0])
+                print(separator)
                 print(("In this section you can visualize the mount of taxes "
                        "you have input\nwhen initiating the application, and "
                        "all calculations\nwill be based on that input:\n"))

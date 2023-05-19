@@ -13,6 +13,7 @@ from modules.asset import Asset
 from modules.welcome import welcome_users
 
 margin = f'----------------------------\n'
+separator = f'\n-------NEW SECTION----\n'
 
 # Google Sheets related constants and credentials
 SCOPE = [
@@ -128,12 +129,14 @@ class Google_Portfolio(object):
 
             elif menu_input == '2':  # Transaction
                 t_paris = self.transactions_active[0]
+                print(separator)
                 print('Your last 6 transactions: \n')
                 for transaction in t_paris:
                     print(f'{transaction}')
 
             elif menu_input == '3':  # Data Analysis
                 data_pairs = self.data_analysis_active[0]
+                print(separator)
                 print(("Overview:\n\n- Here, you'll have the ability "
                        "to view your curr. asset portfolio.\n\n- The amount, "
                        "prices, and associated taxes will be provided"
@@ -164,6 +167,7 @@ class Google_Portfolio(object):
                     print(f'\n"{input_tax}" not correct, please try again!')
 
             elif menu_input == '6':
+                print(separator)
                 self.my_rss_news(url)
 
             elif menu_input == '7':

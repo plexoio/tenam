@@ -13,7 +13,7 @@ from modules.asset import Asset
 from modules.welcome import welcome_users
 
 margin = f'----------------------------\n'
-separator = f'\n-------NEW SECTION----\n'
+separator = f'\n-------------------NEW SECTION-------------------\n'
 
 # Google Sheets related constants and credentials
 SCOPE = [

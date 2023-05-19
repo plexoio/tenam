@@ -103,7 +103,7 @@ class Google_Portfolio(object):
 
             elif menu_input == '3':  # Data Analysis
                 data_pairs = self.data_analysis_active[0]
-                print(f"In this section, you'll have the ability to view your current asset portfolio.\nThe amount, prices, and associated taxes of each asset will be provided\nto help you analyze your potential profits and ascertain your tax obligations:\n")
+                print(f"Overview:\n\n- In this section, you'll have the ability to view your current asset portfolio.\n\n- The amount, prices, and associated taxes of each asset will be provided\nto help you analyze your potential profits and ascertain your tax obligations:\n")
                 for my_data in data_pairs:
                     print(f'{my_data}')
                 print(f'{margin}RSS news: GOES HERE! \n')
@@ -112,13 +112,22 @@ class Google_Portfolio(object):
                 taxation_data = int(self.taxation_active[0][0])
                 print(f'In this section you can visualize the mount of taxes you have input\nwhen initiating the application, and the subsequent calculations\nwill be based on that input:\n')
                 print(f'Your tax responsability value is: {taxation_data}%\n')
-            
+
             elif menu_input == '5':
-                tax = int(input('\nHow much taxes do you pay in percentage?: '))
-                if tax >= 0:
-                    taxation = Taxation(tax)
-                    taxation.assigning_tax()
-                    print('\nPlease, restart application to load the new tax calculations!\n')
+                input_tax = input(
+                    '\nHow much taxes do you pay in percentage?: ')
+                try:
+                    tax = int(input_tax)
+                    if tax >= 0:
+                        taxation = Taxation(tax)
+                        taxation.assigning_tax()
+                        print(
+                            '\nPlease, restart application to load the new tax calculations!')
+                    else:
+                        print('Only positve numbers!')
+                except ValueError:
+                    print(f'\n"{input_tax}" is not a number, please try again!')
+
             elif menu_input == '7':
                 clear_screen()
 
@@ -228,6 +237,8 @@ class Data_Analysis(object):
 
     def __init__(self):
         # Local Variables
+        self.asset = Asset()  # Asset instance for Menu
+        self.assets_active = []
         self.taxation = Get_Taxation()  # Taxation instance for analysis
         self.taxation_active = []
 
@@ -236,6 +247,12 @@ class Data_Analysis(object):
         Fetch Data Analysis data from Google Sheet to compose Google_Sheet class
         '''
         # Assembling data from Google Sheets
+
+        # GET Asset's class function
+        current_pairs = self.asset.assets_display()
+
+        # STORE Asset's values for menu
+        self.assets_active.append(current_pairs)
 
         # GET Taxation's class function
         current_taxation = self.taxation.my_tax()
@@ -255,29 +272,35 @@ class Data_Analysis(object):
                         for rows in analysis_values]
         analysis_pairs = []
 
-        # local variables
-        my_currencies = '- Currency: '
-        my_old_price = '- Purchase Price: '
-        my_new_price = '- Actual Price: '
-        my_tax = '- Tax Responsibility: '
-        my_pay_tax = '- Tax to pay: '
+        # Local variables
+        my_actual_amount = '- '
+        my_old_price = '- Purchase price: '
+        my_new_price = '- Actual price: '
+        my_tax = '- Taxation: '
+        my_pay_tax = '- Calculated tax: '
         my_profit = '- Calculated profit: '
 
         # Data Analysis Variables
-
-        # purchase_price = []
-        # actual_price = []
-        # tax_pay = []
         taxation_data = int(self.taxation_active[0][0])
         push_data = SHEET.worksheet('data_analysis')
-        i = 2
+
+        i = 2  # Move values in Google Sheet
+
+        # Sort Amounts from Asset's class
+        a = 0
+        my_amount = self.assets_active[0]
+        nums = []
+        for asset in my_amount:
+            nums.append(asset)
+
         # Data processing
         for pairs in analysis_dic:
-            self.currency = pairs.get('currency')
             self.old_price = int(pairs.get('old_price'))
             self.new_price = int(pairs.get('new_price'))
             self.profit = pairs.get('profit')
-            
+
+            # Do calculations
+
             old_price = self.old_price
             new_price = self.new_price
             tax_pay = new_price * taxation_data / 100
@@ -285,9 +308,11 @@ class Data_Analysis(object):
 
             push_data.update(f'D{i}', tax_pay)
             push_data.update(f'E{i}', new_earn)
-            i += 1
+            i += 1  # Move values in Google Sheet
+
             analysis_pairs.append(
-                f'{margin}{my_currencies}{self.currency}\n{my_old_price}{self.old_price}$\n{my_new_price}{self.new_price}$\n{my_tax}: {taxation_data}%\n{my_pay_tax}: {tax_pay}')
+                f'{margin}{my_actual_amount}{nums[a]}\n{my_old_price}{self.old_price}$\n{my_new_price}{self.new_price}$\n{my_tax}{taxation_data}%\n{my_pay_tax}{tax_pay}\n{my_profit}{new_earn}')
+            a += 1
         return analysis_pairs
 
 

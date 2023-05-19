@@ -84,7 +84,7 @@ The `Login` and `Welcome` features are definitely crucial, receiving a perfect s
 
 Similarly, the `Add, Delete, and Update` features also scored 5 out of 5. These features allow users to interact with the application beyond just inputting data.
 
-On the other hand, the `taxation` and `RSS information` features scored the lowest. Given our ambition, it might be reasonable to exclude one or both of these features in this iteration since they are not critical at the moment.
+On the other hand, the "taxation" and "RSS information" features scored the lowest. Considering our ambition, we initially believed it would not be possible to include one or both of these features in this iteration as they are not critical at the moment. However, we have managed to successfully add them to this MVP.
 
 Features that scored 4 or above, such as `Transaction History`, will definitely be included. However, if a feature scored 3 in viability, it means that it may not be as advanced, at least for now.
 

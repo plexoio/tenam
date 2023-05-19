@@ -95,7 +95,7 @@ class Google_Portfolio(object):
         menu_list = (
             'Menu section:\n\n1. Assets\n2. Transaction\n3. Data Analysis'
             '\n4. Taxation\n5. Update Tax Value\n6. RSS News\n7. Refresh\n'
-            '8. Exit')
+            '8. Exit\n')
 
         # GET Asset's class function
         # Get Asset class function
@@ -121,6 +121,7 @@ class Google_Portfolio(object):
             clear_screen()
 
             if menu_input == '1':  # Asset
+                clear_screen()
                 pairs = self.assets_active[0]
                 print('Your current assets: \n')
                 for asset in pairs:
@@ -128,6 +129,7 @@ class Google_Portfolio(object):
                 print('RSS news: GOES HERE! \n')
 
             elif menu_input == '2':  # Transaction
+                clear_screen()
                 t_paris = self.transactions_active[0]
                 print('Your last 6 transactions: \n')
                 for transaction in t_paris:
@@ -135,6 +137,7 @@ class Google_Portfolio(object):
                 print(f'{margin}RSS news: GOES HERE! \n')
 
             elif menu_input == '3':  # Data Analysis
+                clear_screen()
                 data_pairs = self.data_analysis_active[0]
                 print(("Overview:\n\n- Here, you'll have the ability "
                        "to view your curr. asset portfolio.\n\n- The amount, "
@@ -146,6 +149,7 @@ class Google_Portfolio(object):
                 print(f'{margin}RSS news: GOES HERE! \n')
 
             elif menu_input == '4':  # Actual Tax Taxation
+                clear_screen()
                 taxation_data = int(self.taxation_active[0][0])
                 print(("In this section you can visualize the mount of taxes "
                        "you have input\nwhen initiating the application, and "
@@ -153,6 +157,7 @@ class Google_Portfolio(object):
                 print(f'Your tax responsability value is: {taxation_data}%\n')
 
             elif menu_input == '5':
+                clear_screen()
                 input_tax = input('\nInput your tax duty in percentage:\n')
                 try:
                     tax = int(input_tax)
@@ -167,6 +172,7 @@ class Google_Portfolio(object):
                     print(f'\n"{input_tax}" not correct, please try again!')
 
             elif menu_input == '6':
+                clear_screen()
                 self.my_rss_news(url)
 
             elif menu_input == '7':

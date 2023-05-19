@@ -202,32 +202,16 @@ Our next stop is the `Surface Plane`.
 
 ## Surface Plane <a name="surface-plane"></a> | [#](#index)
 
-After conducting research (strategy), considering the project scope, brainstorming ideas for the structure, and engaging in discussions to create a project skeleton, we were ready to move forward with creating a prototype/demo using wireframes. 
+This time we did not need wireframes or deep discussions about the front-end part since that was provided by 'Code Institute'. We considered the ideas and constratins of how things should look like inside the 'framework' they have provided to us. 
 
-All of these planning stages were essential to reach this point (Surface), and we understand that it's only when we start building or coding that we may discover any gaps or oversights. Therefore, it makes more sense to start finally bringing our ideas to life now. 
+We previously thought that the secuence of of UX design would not help us, however we were suprised on how effective it acutally is when directing properly. Hence, we can say that all planes were essential to reach this point (Surface), and we understand that it's only when we start building or coding that we may discover any gaps or oversights but in a back-end way.
 
 We're excited to see how our project takes shape and how we continue to refine it along the way.
 
-**Approach:**
-
-Our approach to the project is similar to the mindset of Isaac Newton, who said, `"My method is different. I do not rush into actual work. When I get a new idea, I start at once building it up in my imagination, and make improvements and operate the device in my mind. When I have gone so far as to embody everything in my invention, every possible improvement I can think of, and when I see no fault anywhere, I put into concrete form the final product of my brain."` Similarly, we have taken the necessary steps to plan and refine our project before moving on to the programming stage.
-
-As part of this process, we are currently focusing on the surface plane, which involves designing the interface and considering how users will interact with and perceive the product as well. This includes creating a positive visual language and context for each step and interaction to ensure efficiency and a seamless user experience. 
-
-These details are crucial for the success of the project, and we are dedicated to getting them right:
 
 ### Color
 
-|                                                                  | Color Type      | Color Name      | Hex Code  |
-| ---------------------------------------------------------------- | --------------- | --------------- | --------- |
-| ![Color](https://via.placeholder.com/50x50/3498db/3498db?text=+) | Primary Color   | Shade of Blue   | `#3498db` |
-| ![Color](https://via.placeholder.com/50x50/f5f5f5/f5f5f5?text=+) | Secondary Color | Whitesmoke      | `#f5f5f5` |
-| ![Color](https://via.placeholder.com/50x50/808080/808080?text=+) | Secondary Color | Shade of gray   | `#808080` |
-| ![Color](https://via.placeholder.com/50x50/3a3a3a/3a3a3a?text=+) | Secondary Color | Shade of Black  | `#3a3a3a` |
-| ![Color](https://via.placeholder.com/50x50/f2f2f2/f2f2f2?text=+) | Secondary Color | Shade of White  | `#f2f2f2` |
-| ![Color](https://via.placeholder.com/50x50/e46e54/e46e54?text=+) | Secondary Color | Shade of red    | `#E46E54` |
-| ![Color](https://via.placeholder.com/50x50/ff6600/ff6600?text=+) | Secondary Color | Shade of orange | `#ff6600` |
-
+- Default ones on template provided by 'Code Institute'
 
 #### Pallet
 

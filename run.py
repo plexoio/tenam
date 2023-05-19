@@ -124,7 +124,7 @@ class Google_Portfolio(object):
         while True:
 
             print(menu_list)
-            menu_input = input('Where do you want to go?: ')
+            menu_input = input('Where do you want to go?:\n')
             clear_screen()
 
             if menu_input == '1':  # Asset
@@ -155,7 +155,7 @@ class Google_Portfolio(object):
 
             elif menu_input == '5':
                 input_tax = input(
-                    '\nHow much taxes do you pay in percentage?: ')
+                    '\nHow much taxes do you pay in percentage?:\n')
                 try:
                     tax = int(input_tax)
                     if tax >= 0:
@@ -226,8 +226,8 @@ def login_input():
     print(f'For testing purposes use this data:\nUsername: Tenam\nPassword: test123\n')
     while True:
 
-        username = input('Username: ')
-        password = getpass('Password: ')
+        username = input('Username:\n')
+        password = getpass('Password:\n')
         login = User(username, password)
 
         if login.user_validation():

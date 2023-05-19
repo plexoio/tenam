@@ -14,7 +14,9 @@ class Asset(object):
         title_values = my_assets[1:]
 
         # Internal Sorting
-        assets_dic = [dict(zip(title_assets, rows))for rows in title_values]
+        assets_dic = [
+            dict(zip(title_assets, rows)) for rows in title_values
+        ]
         current_pairs = []
 
         # Data processing

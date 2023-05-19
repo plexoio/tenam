@@ -17,8 +17,10 @@ class Transaction(object):
         transaction_values = my_transaction[1:]
 
         # Internal Sorting
-        transactions_dic = [dict(zip(title_transactions, rows))
-                            for rows in transaction_values]
+        transactions_dic = [
+            dict(zip(title_transactions, rows))
+            for rows in transaction_values
+        ]
         transaction_pairs = []
 
         # Data processing
@@ -28,5 +30,7 @@ class Transaction(object):
             self.status = pairs.get('status')
             self.amount = pairs.get('amount')
             transaction_pairs.append(
-                f'{margin}{self.currency}: {self.amount}\n\n Status: {self.status}\n\nTxID: {self.txid}')
+                f'{margin}{self.currency}: {self.amount}\n\n'
+                f'Status: {self.status}\n\nTxID: {self.txid}'
+            )
         return transaction_pairs

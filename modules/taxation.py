@@ -15,7 +15,7 @@ class Taxation(object):
 
     def assigning_tax(self):
         '''
-        Instance to upload to server what user inputs as seen on the Google_Portfolio composition
+        Upload user inputs to the server for Google_Portfolio composition
         '''
         print('Data uploading to server...')
         self.to_tax.update('A2', self.tax)

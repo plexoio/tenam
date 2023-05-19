@@ -1,6 +1,8 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import os  # for clearing screen depending on OS
+import feedparser # importing module after 'pip install feedparser' library
+import textwrap # wrapper library to make sure text don't exceed 80 chrs
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -49,6 +51,19 @@ class Google_Portfolio(object):
         self.taxation = Get_Taxation()  # Taxation instance for Menu
         self.taxation_active = []
 
+    def my_rss_news(self, url):
+        feed = feedparser.parse(url)
+        top = feed.entries[:2]
+
+        for news in top:
+            print('RSS News:\n\n')
+            print(f'TITLE: {news.title}\n')
+            text_lines = textwrap.wrap(news.summary[:200], width=70)
+            full_text = '\n'.join(text_lines) # get rid of brackets and add space in between
+            print(f'SUMMARY: {full_text}\n')
+            print('LINK: ', news.link)
+            print('-------------------------\n')
+
     def menu(self):
         '''
         Represents the instance of the whole app navigation
@@ -56,6 +71,10 @@ class Google_Portfolio(object):
         menu_list = '\nMenu section:\n\n1. Assets\n2. Transaction\n3. Data Analysis\n4. Taxation\n5. Update Tax Value\n6. RSS News\n7. Refresh\n'
 
         # Assembling variables for Menu
+
+        # RSS
+
+        url = 'https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml'
 
         # GET Asset's class function
         current_pairs = self.asset.assets_display()  # Get Asset class function
@@ -127,6 +146,9 @@ class Google_Portfolio(object):
                         print('Only positve numbers!')
                 except ValueError:
                     print(f'\n"{input_tax}" is not a number, please try again!')
+
+            elif menu_input == '6':
+                self.my_rss_news(url)
 
             elif menu_input == '7':
                 clear_screen()

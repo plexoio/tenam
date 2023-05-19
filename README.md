@@ -170,31 +170,31 @@ In this initial iteration, we have a clear understanding of our desires, require
 
 ## Skeleton Plane <a name="skeleton-plane"></a> | [#](#index)
 
-Tenam cryptoportfolio tracker is our first real backend project ever built. It has represented a challenge all along the way with gratifying results. We have collected fragments from various sources, much like ascending a mountain. We have carefully selected and refined these pieces from the strategy plane till this plane, analyzing and `extrapolating` essential data, steps, features, and functionalities. As well as implementing different technologies, skills, and knowledge.
+Tenam cryptoportfolio tracker is our first real backend project ever built. It has presented a challenge throughout the journey, but with gratifying results. We have collected fragments from various sources, much like ascending a mountain. We have carefully selected and refined these pieces from the strategy plane to this current plane, analyzing and `extrapolating` essential data, steps, features, and functionalities. We have also implemented different technologies, skills, and knowledge.
 
 As mentioned before, Tenam has followed a logical sequence: Strategy, Scope, Structure, and now we find ourselves at the `Skeleton Plane`.
 
-This time we did not have to worry about the front-end, Code Institute took care of that for us, providing a template and instructions to upload it after on Heroku. Hence, the current image is the one that helped us visualize how our application would run and work based on the constraints it holds.
+This time we did not have to worry about the front-end; `Code Institute` took care of that for us by providing a template and instructions to upload it on `Heroku`. Hence, the current image is the one that helped us visualize how our application would run and work based on the constraints it holds.
 
 At this plane, all the features, functionalities, elements' interactions, and content layouts are `visible` and `comprehensible`. We can understand the `interconnectedness` of each component we have been diligently working on.
 
 The plan is to build a data processing application on a command-line interface, which can then be used as a backend for a frontend site.
 
-Here is an example of what we saw before starting coding, we had to take into account the '80 columns by 24 rows' constraint.
+Here is an example of what we saw before starting coding. We had to take into account the '80 columns by 24 rows' constraint.
 
 ![Skeleton image](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/skeleton.png)
 
 The simple and straightforward navigation is visible, and everything is just a few clicks away from the user's goal. The priorities are also clear: Assets, Transaction, Data Analysis, Taxation, Update Tax Value, RSS News, Refresh, and Exit.
 
-Notice the progression from simple to more complex functionalities and layouts. Users are able to learn as they walk through the command-line. We don't want to overwhelm them, so we take the `progressive disclosure` part seriously as well.
+Notice the progression from simple to more complex functionalities and layouts. Users are able to learn as they navigate through the command-line. We take the `progressive disclosure` part seriously to avoid overwhelming them.
 
 ![Skeleton image](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/skeleton.gif)
 
-We invested time and resources into this process before `coding` the actual product to bring it to life. In this case, we are using a gif with the final result due to the fact that the skeleton part of the front-end never changed.
+We invested time and resources into this process before `coding` the actual product to bring it to life. In this case, we are using a gif to showcase the final result, as the skeleton part of the front-end never changed.
 
-Although it's a robust design, everything is attainable by the users with a bit of intuition. We paid attention to the users following their own habits, standards, and conventions.
+Although it's a robust design, everything is attainable by the users with a bit of intuition. We paid attention to the users, following their own habits, standards, and conventions.
 
-As seen from the gif, we paid attention to keywords, invisible information, hierarchies, and content in lists and sublists. All can be seen in our desktop-based `prototype/demo` deployed already on Heroku.
+As seen from the gif, we focused on keywords, invisible information, hierarchies, and content presented in lists and sublists. You can experience all of these aspects in our desktop-based `prototype/demo` already deployed on Heroku.
 
 We strived to keep everything simple, intuitive, and repetitive. At the same time, we set the foundation for our last plane by defining `spaces`, `layouts`, `interaction`, and `feedback`.
 

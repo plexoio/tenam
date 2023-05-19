@@ -2,7 +2,7 @@
 from modules.portfolio import Google_Portfolio, User, Asset, Transaction, Data_Analysis, Taxation  # author's
 from modules.login import *
 
-#login_input() # call login
+login_input() # call login
 
 menu = Google_Portfolio() # After login launch Menu
 menu.menu()

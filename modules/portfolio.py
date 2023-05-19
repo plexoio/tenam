@@ -53,7 +53,7 @@ class Google_Portfolio(object):
         '''
         Represents the instance of the whole app navigation
         '''
-        menu_list = 'Menu:\n\n1.Assets\n2.Transaction\n3.Data Analysis\n4.Taxation\n5.Update Tax Value\n6.RSS News\n7.Return\n'
+        menu_list = '\nMenu section:\n\n1. Assets\n2. Transaction\n3. Data Analysis\n4. Taxation\n5. Update Tax Value\n6. RSS News\n7. Refresh\n'
 
         # Assembling variables for Menu
 
@@ -84,10 +84,10 @@ class Google_Portfolio(object):
         while True:
 
             print(menu_list)
-            menu_input = input('Type index number: ')
+            menu_input = input('Where do you want to go?: ')
+            clear_screen()
 
             if menu_input == '1':  # Asset
-                clear_screen()
                 pairs = self.assets_active[0]
                 print('Your current assets: \n')
                 for asset in pairs:
@@ -95,7 +95,6 @@ class Google_Portfolio(object):
                 print('RSS news: GOES HERE! \n')
 
             elif menu_input == '2':  # Transaction
-                clear_screen()
                 t_paris = self.transactions_active[0]
                 print('Your last 6 transactions: \n')
                 for transaction in t_paris:
@@ -103,7 +102,6 @@ class Google_Portfolio(object):
                 print(f'{margin}RSS news: GOES HERE! \n')
 
             elif menu_input == '3':  # Data Analysis
-                clear_screen()
                 data_pairs = self.data_analysis_active[0]
                 print(f"In this section, you'll have the ability to view your current asset portfolio.\nThe amount, prices, and associated taxes of each asset will be provided\nto help you analyze your potential profits and ascertain your tax obligations:\n")
                 for my_data in data_pairs:
@@ -111,24 +109,22 @@ class Google_Portfolio(object):
                 print(f'{margin}RSS news: GOES HERE! \n')
 
             elif menu_input == '4':  # Actual Tax Taxation
-                clear_screen()
                 taxation_data = int(self.taxation_active[0][0])
                 print(f'In this section you can visualize the mount of taxes you have input\nwhen initiating the application, and the subsequent calculations\nwill be based on that input:\n')
                 print(f'Your tax responsability value is: {taxation_data}%\n')
             
             elif menu_input == '5':
-                tax = int(input('How much taxes do you pay in percentage?: '))
+                tax = int(input('\nHow much taxes do you pay in percentage?: '))
                 if tax >= 0:
                     taxation = Taxation(tax)
                     taxation.assigning_tax()
-                    print('\nPlease, restart application to load results!\n')
+                    print('\nPlease, restart application to load the new tax calculations!\n')
             elif menu_input == '7':
                 clear_screen()
-                self.menu()  # Recursion here
 
             else:
                 clear_screen()
-                print('Value not supported try again!')
+                print('Value not supported just yet, try again!\n')
 
 
 class User(object):
@@ -162,7 +158,7 @@ class User(object):
                 pass
             else:
                 print(
-                    f'{self.username} OR {self.password} did not match with our records')
+                    f'\nThe Username: "{self.username}" OR Password: "{self.password}" did not match with our records.\nPlease, try again!\n')
                 return False
         return True
 
@@ -305,10 +301,10 @@ class Taxation(object):
         self.to_tax = SHEET.worksheet('taxation')
 
     def assigning_tax(self):
-        clear_screen()
         print('Data uploading to server...')
         self.to_tax.update('A2', self.tax)
         print('Data uploaded to server successfully!')
+        clear_screen()
 
 
 class Get_Taxation(object):

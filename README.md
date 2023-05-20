@@ -17,7 +17,7 @@ Please note that this project is not available for public deployment; **it is in
 
 ![Responsive Mockup image](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/mockup.png)
 
-**Preview Link:** [Tenam](https://tenam-crypto.herokuapp.com/)
+**Preview Link:** [Tenam](https://tenam-crypto.herokuapp.com/) - reload the page several times if an error occurs
 
 
 ## [Index - Return](https://github.com/plexoio/tenam/blob/main/README.md)

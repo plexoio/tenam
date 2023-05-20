@@ -236,7 +236,6 @@ def login_input():
         if login.user_validation():
             clear_screen()
             print('Loading enviroment for you, almost...')
-            time.sleep(2)
             clear_screen()
             print('State: Login successful!\n')
             break

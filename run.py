@@ -94,7 +94,7 @@ class Google_Portfolio(object):
                '?outputType=xml')
 
         menu_list = (
-            'Menu section:\n\n1. Assets\n2. Transaction\n3. Data Analysis'
+            '\nMenu section:\n\n1. Assets\n2. Transaction\n3. Data Analysis'
             '\n4. Taxation\n5. Update Tax Value\n6. RSS News\n7. Refresh\n'
             '8. Exit\n')
 

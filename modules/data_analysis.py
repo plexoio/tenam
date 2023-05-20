@@ -42,6 +42,7 @@ class Data_Analysis(object):
         my_tax = '- Taxation: '
         my_pay_tax = '- Calculated tax: '
         my_profit = '- Calculated profit: '
+        in_future = f'- Foresight at 40% of the purchase price: '
 
         taxation_data = int(self.taxation_active[0][0])
         push_data = self.sheet.worksheet('data_analysis')
@@ -62,17 +63,22 @@ class Data_Analysis(object):
             old_price = self.old_price
             new_price = self.new_price
             tax_pay = new_price * taxation_data / 100
-            new_earn = new_price - tax_pay - old_price
+            new_earn = new_price - int(tax_pay) - old_price
+
+            foresight = old_price * 40 / 100
+            futue_price = int(foresight) + old_price
 
             push_data.update(f'D{i}', tax_pay)
             push_data.update(f'E{i}', new_earn)
+
             i += 1  # Move values in Google Sheet
 
             result_str = (
                 f'{margin}{my_actual_amount}{nums[a]}\n{my_old_price}'
                 f'{self.old_price}$\n{my_new_price}{self.new_price}$\n'
-                f'{my_tax}{taxation_data}%\n{my_pay_tax}{tax_pay}\n'
-                f'{my_profit}{new_earn}'
+                f'{my_tax}{taxation_data}%\n{my_pay_tax}{tax_pay}$\n'
+                f'{my_profit}{new_earn}$\n'
+                f'{in_future}{futue_price}$'
             )
             analysis_pairs.append(result_str)
             a += 1

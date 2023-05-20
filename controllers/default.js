@@ -4,7 +4,7 @@ import { writeFile } from 'fs';
 export function install () {
 
     ROUTE('/');
-    socket('/', socket, ['raw']);
+    WEBSOCKET('/', socket, ['raw']);
 
 }
 

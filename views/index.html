@@ -1,5 +1,7 @@
 <body>
+
     <button onclick="window.location.reload()">Run Program</button>
+
     <div id="terminal"></div>
 
     <script>
@@ -9,6 +11,7 @@
         });
         term.open(document.getElementById('terminal'));
         term.writeln('Running startup command: python3 run.py. Rerun if app not loaded!');
+        term.writeln('Reload page if Tenam did not start running!');
         term.writeln('');
 
         var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (

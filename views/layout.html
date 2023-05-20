@@ -10,9 +10,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xterm/3.14.5/addons/attach/attach.js"></script>
     <title>Python Terminal by Code Institute</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz@6..72&family=Roboto&display=swap');
         body {
             font-family: 'Newsreader', Arial, serif;
+            text-align: center;
         }
 
         /**
@@ -25,6 +25,7 @@
             user-select: none;
             -ms-user-select: none;
             -webkit-user-select: none;
+            display: inline-block;
         }
 
         .xterm.focus,
@@ -62,6 +63,7 @@
 
         .xterm .composition-view {
             /* TODO: Composition position got messed up somewhere */
+            font-family: 'Newsreader', Arial, serif;
             background: #000;
             color: #FFF;
             display: none;
@@ -167,6 +169,7 @@
             border-radius: 8px;
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 @{body}

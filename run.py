@@ -12,7 +12,14 @@ from modules.transaction import Transaction
 from modules.asset import Asset
 from modules.welcome import welcome_users
 
-separator = f'\n-------------------{BOLD}NEW SECTION{RESET}-------------------\n'
+# Menu separators
+separator1 = f'\n--------------- {BOLD}ASSET SECTION{RESET} ---------------\n'
+separator2 = f'\n------------ {BOLD}TRANSACTION SECTION{RESET} ------------\n'
+separator3 = f'\n---------- {BOLD}DATA ANALYSIS SECTION{RESET} ----------\n'
+separator4 = f'\n----------- {BOLD}TAXATION SECTION{RESET} -----------\n'
+separator5 = f'\n---------- {BOLD}UPDATE TAX SECTION{RESET} ----------\n'
+separator6 = f'\n--------------- {BOLD}RSS SECTION{RESET} ---------------'
+
 
 # Google Sheets related constants and credentials
 SCOPE = [
@@ -76,7 +83,7 @@ class Google_Portfolio(object):
             text_lines = textwrap.wrap(news.summary[:200], width=70)
             # get rid of brackets and add space in between
             full_text = '\n'.join(text_lines)
-            print(f'{full_text}...\n')
+            print(f'{BOLD}{full_text}...{RESET}\n')
 
             # Link
             print(f'{bullet_point}', news.link)
@@ -122,14 +129,14 @@ class Google_Portfolio(object):
 
                 if menu_input == '1':  # Asset
                     pairs = self.assets_active[0]
-                    print(separator)
+                    print(separator1)
                     print('Here you can visualize all your current crypto holdings\n')
                     for asset in pairs:
                         print(f'{bullet_point} {asset}')
 
                 elif menu_input == '2':  # Transaction
                     t_paris = self.transactions_active[0]
-                    print(separator)
+                    print(separator2)
                     print('Last 6 transactions available in this section')
                     a = 0
                     for transaction in t_paris:
@@ -139,24 +146,25 @@ class Google_Portfolio(object):
 
                 elif menu_input == '3':  # Data Analysis
                     data_pairs = self.data_analysis_active[0]
-                    print(separator)
-                    print("Based on your assets, old price, new price and tax value "
-                    "we have analized your data \n"
-                    "for insightful retrospection and foresight regarding your holdings."
+                    print(separator3)
+                    print("Based on your assets, old price, new price and tax value\n"
+                    "we have analized your data for insightful retrospection\n"
+                    "and foresight regarding your holdings"
                     )
                     for my_data in data_pairs:
                         print(f'{my_data}')
 
                 elif menu_input == '4':  # Actual Tax Taxation
                     taxation_data = int(self.taxation_active[0][0])
-                    print(separator)
+                    print(separator4)
                     print("Default tax value or the one you input\n"
-                        "when updating your taxation.")
+                        "when updating your taxation\n")
                     print(f'{bullet_point} Your tax responsability value is: {taxation_data}%')
 
                 elif menu_input == '5': # Update taxation
+                    print(separator5)
                     try:
-                        input_tax = input('\nInput your tax duty in percentage:\n')
+                        input_tax = input('Input your tax duty in percentage:\n')
                         tax = int(input_tax)
                         if tax >= 0:
                             taxation = Taxation(tax, sheet)
@@ -173,14 +181,14 @@ class Google_Portfolio(object):
                         clear_screen()
 
                 elif menu_input == '6': # Get RSS News
-                    print(separator)
+                    print(separator6)
                     self.my_rss_news(url)
 
                 elif menu_input == '7': # Refresh screen
                     clear_screen()
 
                 elif menu_input == "8": # Exit app
-                    slow_type('You have been disconnected!')
+                    slow_type('You have been disconnected!\n')
                     return
                 else:
                     clear_screen()

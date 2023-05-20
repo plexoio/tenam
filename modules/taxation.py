@@ -1,5 +1,5 @@
 from modules.utilities import clear_screen
-
+import time
 
 class Taxation(object):
     '''
@@ -20,6 +20,7 @@ class Taxation(object):
         print('Data uploading to server...')
         self.to_tax.update('A2', self.tax)
         print('Data uploaded to server successfully!')
+        time.sleep(2)
         clear_screen()
 
 

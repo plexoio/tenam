@@ -20,7 +20,7 @@ Please note that this project is not available for public deployment; **it is in
 **Preview Link:** [Tenam](https://tenam-crypto.herokuapp.com/)
 
 
-## Index <a name="index"></a>
+## [Index - Return](https://github.com/plexoio/tenam/blob/main/README.md)
 
 1. [Strategy Plane - Reason, Solution and Value](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/strategy.md)
 2. [Scope Plane - Feature and Capability](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/scope.md)

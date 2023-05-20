@@ -3,6 +3,8 @@ import time
 
 # Global Variables
 bullet_point = "\u2022"
+BOLD = '\033[1m'
+RESET = '\033[0m'
 
 def clear_screen():
     '''

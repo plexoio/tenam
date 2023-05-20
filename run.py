@@ -5,15 +5,14 @@ import textwrap
 import feedparser
 from google.oauth2.service_account import Credentials
 import gspread
-from modules.utilities import clear_screen
+from modules.utilities import bullet_point, BOLD, RESET, clear_screen, slow_type
 from modules.taxation import Taxation, Get_Taxation
 from modules.data_analysis import Data_Analysis
 from modules.transaction import Transaction
 from modules.asset import Asset
 from modules.welcome import welcome_users
 
-margin = f'----------------------------\n'
-separator = f'\n-------------------NEW SECTION-------------------\n'
+separator = f'\n-------------------{BOLD}NEW SECTION{RESET}-------------------\n'
 
 # Google Sheets related constants and credentials
 SCOPE = [
@@ -66,22 +65,21 @@ class Google_Portfolio(object):
 
         for news in top:
             x += 1
-            print(f'RSS News {x}:\n')
+            print(f'\n{BOLD}RSS News {x}{RESET}\n')
 
             # Title
             title_lines = textwrap.wrap(news.title, width=70)
             full_title = '\n'.join(title_lines)
-            print(f'TITLE: {full_title}\n')
+            print(f'{bullet_point} {full_title}:\n')
 
             # Summary
             text_lines = textwrap.wrap(news.summary[:200], width=70)
             # get rid of brackets and add space in between
             full_text = '\n'.join(text_lines)
-            print(f'SUMMARY: {full_text}\n')
+            print(f'{full_text}...\n')
 
             # Link
-            print('LINK: ', news.link)
-            print('-------------------------\n')
+            print(f'{bullet_point}', news.link)
 
     def menu(self, sheet):
         '''
@@ -104,11 +102,11 @@ class Google_Portfolio(object):
         self.assets_active.append(current_pairs)
 
         # GET Transaction class function
-        current_transactions = self.transaction.my_transactions(margin)
+        current_transactions = self.transaction.my_transactions()
         self.transactions_active.append(current_transactions)
 
         # GET Data_Analysis's class function
-        curr_data_analysis = self.data_analysis.my_data_analysis(sheet, margin)
+        curr_data_analysis = self.data_analysis.my_data_analysis(sheet)
         self.data_analysis_active.append(curr_data_analysis)
 
         # GET Taxation's class function
@@ -125,35 +123,36 @@ class Google_Portfolio(object):
                 if menu_input == '1':  # Asset
                     pairs = self.assets_active[0]
                     print(separator)
-                    print('Your current assets: \n')
+                    print('Here you can visualize all your current crypto holdings\n')
                     for asset in pairs:
-                        print(f'{asset}\n')
+                        print(f'{bullet_point} {asset}')
 
                 elif menu_input == '2':  # Transaction
                     t_paris = self.transactions_active[0]
                     print(separator)
-                    print('Your last 6 transactions: \n')
+                    print('Last 6 transactions available in this section')
+                    a = 0
                     for transaction in t_paris:
+                        a += 1
+                        print(f'\n{bullet_point} {BOLD}BLOCKCHAIN BLOCK {a}{RESET}\n')
                         print(f'{transaction}')
 
                 elif menu_input == '3':  # Data Analysis
                     data_pairs = self.data_analysis_active[0]
                     print(separator)
-                    print("Overview:\n\n- Here, you'll have the ability "
-                        "to view your curr. asset portfolio.\n\n- The amount, "
-                        "prices, and associated taxes will be provided"
-                        "\nto help you analyze your potential profits and "
-                        "ascertain your tax obligations:\n")
+                    print("Based on your assets, old price, new price and tax value "
+                    "we have analized your data \n"
+                    "for insightful retrospection and foresight regarding your holdings."
+                    )
                     for my_data in data_pairs:
                         print(f'{my_data}')
 
                 elif menu_input == '4':  # Actual Tax Taxation
                     taxation_data = int(self.taxation_active[0][0])
                     print(separator)
-                    print("In this section you can visualize the mount of taxes "
-                        "you have input\nwhen initiating the application, and "
-                        "all calculations\nwill be based on that input:\n")
-                    print(f'Your tax responsability value is: {taxation_data}%\n')
+                    print("Default tax value or the one you input\n"
+                        "when updating your taxation.")
+                    print(f'{bullet_point} Your tax responsability value is: {taxation_data}%')
 
                 elif menu_input == '5': # Update taxation
                     try:
@@ -167,9 +166,9 @@ class Google_Portfolio(object):
                         else:
                             print('Only positve numbers!')
                     except ValueError:
-                        print(f'\n"{input_tax}" not correct, please try again!')
+                        slow_type(f'\n"{input_tax}" input not correct, please try again!')
                     except KeyboardInterrupt:
-                        print("Key not accepted, please try again!")
+                        slow_type(" Key not accepted, please try again!")
                         time.sleep(2)
                         clear_screen()
 
@@ -181,13 +180,13 @@ class Google_Portfolio(object):
                     clear_screen()
 
                 elif menu_input == "8": # Exit app
-                    print('You have been disconnected!')
+                    slow_type('You have been disconnected!')
                     return
                 else:
                     clear_screen()
-                    print('Value not supported just yet, try again!')
+                    slow_type('Value not supported just yet, try again!\n')
             except KeyboardInterrupt:
-                print("Key not accepted, please try again!")
+                slow_type(" Key not accepted, please try again!")
                 time.sleep(2)
                 clear_screen()
 
@@ -223,8 +222,8 @@ class User(object):
                     dic.get('password') == self.password):
                 pass
             else:
-                print('\nThe Username: "{}" OR Password: "{}" did not match '
-                      'with our records.\nPlease, try again!\n'
+                slow_type('The Username: "{}" OR Password: "{}" did not match '
+                      'with our records.\n'
                       .format(self.username, self.password))
                 return False
         return True
@@ -234,26 +233,26 @@ def login_input():
     '''
     Particular function to deal with login and validation
     '''
-    print('Welcome to the login section, '
-            'for testing purposes use this data:\n\n'
-            'Username: Tenam\nPassword: test123\n'
+    print(f'Welcome to the login section, '
+            f'for testing purposes use this data:\n\n'
+            f'{bullet_point} Tenam\n{bullet_point} test123'
         )
 
     while True:
         try:
-            username = input('Username:\n')
-            password = getpass('Password:\n')
+            username = input('\nUsername:\n')
+            password = getpass('\nPassword:\n')
             login = User(username, password)
 
             if login.user_validation():
                 clear_screen()
-                print('Loading enviroment for you, almost...')
+                print('Loading enviroment for you...')
                 time.sleep(2)
                 clear_screen()
-                print('State: Login successful!\n')
+                print('State: Login successful!')
                 break
         except KeyboardInterrupt:
-            print("Key not accepted, please try again!")
+            slow_type(" Key not accepted, please try again!")
             time.sleep(2)
 
 

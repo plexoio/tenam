@@ -1,5 +1,5 @@
 from modules.taxation import Taxation, Get_Taxation
-from modules.utilities import bullet_point, slow_type
+from modules.utilities import bullet_point, BOLD, RESET, slow_type
 
 class Data_Analysis(object):
     '''
@@ -16,7 +16,7 @@ class Data_Analysis(object):
         self.taxation = Get_Taxation()  # Taxation instance for analysis
         self.taxation_active = []
 
-    def my_data_analysis(self, sheet, margin):
+    def my_data_analysis(self, sheet):
         '''
         Get Data Analysis data from Google Sheet to compose Google_Sheet class
         '''
@@ -36,13 +36,13 @@ class Data_Analysis(object):
                         for rows in analysis_values]
         analysis_pairs = []
 
-        my_actual_amount = f'{bullet_point} '
+        my_actual_amount = f' '
         my_old_price = f'{bullet_point} Purchase price: '
         my_new_price = f'{bullet_point} Actual price: '
         my_tax = f'{bullet_point} Taxation: '
         my_pay_tax = f'{bullet_point} Calculated tax: '
         my_profit = f'{bullet_point} Calculated profit: '
-        in_future = f'\n{bullet_point} Calculated foresight profit at 40% from actual price (after tax): '
+        in_future = f'{bullet_point} Calculated foresight profit at 40% from actual price (after tax): '
 
         taxation_data = int(self.taxation_active[0][0])
         push_data = self.sheet.worksheet('data_analysis')
@@ -76,8 +76,9 @@ class Data_Analysis(object):
             i += 1  # Move values in Google Sheet
 
             result_str = (
-                f'{margin}{my_actual_amount}{nums[a]}\n{my_old_price}'
-                f'{self.old_price}$\n{my_new_price}{self.new_price}$\n'
+                f'\n{BOLD}{my_actual_amount}{nums[a]}{RESET}\n\n'
+                f'{my_old_price}{self.old_price}$\n'
+                f'{my_new_price}{self.new_price}$\n'
                 f'{my_tax}{taxation_data}%\n{my_pay_tax}{tax_pay}$\n'
                 f'{my_profit}{new_earn}$\n'
                 f'{in_future}{profit_foresight}$'

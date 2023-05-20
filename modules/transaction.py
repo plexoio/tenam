@@ -6,7 +6,7 @@ class Transaction(object):
     def __init__(self, sheet):
         self.sheet = sheet
 
-    def my_transactions(self, margin):
+    def my_transactions(self):
         '''
         Fetch transactions data from Google Sheet to compose Google_Sheet class
         '''
@@ -30,7 +30,7 @@ class Transaction(object):
             self.status = pairs.get('status')
             self.amount = pairs.get('amount')
             transaction_pairs.append(
-                f'{margin}{self.currency}: {self.amount}\n\n'
+                f'{self.currency}: {self.amount}\n\n'
                 f'Status: {self.status}\n\nTxID: {self.txid}'
             )
         return transaction_pairs

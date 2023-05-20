@@ -117,70 +117,79 @@ class Google_Portfolio(object):
 
         # MENU starts
         while True:
-            print(menu_list)
-            menu_input = input('Where do you want to go?:\n')
-            clear_screen()
-
-            if menu_input == '1':  # Asset
-                pairs = self.assets_active[0]
-                print(separator)
-                print('Your current assets: \n')
-                for asset in pairs:
-                    print(f'{asset}\n')
-
-            elif menu_input == '2':  # Transaction
-                t_paris = self.transactions_active[0]
-                print(separator)
-                print('Your last 6 transactions: \n')
-                for transaction in t_paris:
-                    print(f'{transaction}')
-
-            elif menu_input == '3':  # Data Analysis
-                data_pairs = self.data_analysis_active[0]
-                print(separator)
-                print(("Overview:\n\n- Here, you'll have the ability "
-                       "to view your curr. asset portfolio.\n\n- The amount, "
-                       "prices, and associated taxes will be provided"
-                       "\nto help you analyze your potential profits and "
-                       "ascertain your tax obligations:\n"))
-                for my_data in data_pairs:
-                    print(f'{my_data}')
-
-            elif menu_input == '4':  # Actual Tax Taxation
-                taxation_data = int(self.taxation_active[0][0])
-                print(separator)
-                print(("In this section you can visualize the mount of taxes "
-                       "you have input\nwhen initiating the application, and "
-                       "all calculations\nwill be based on that input:\n"))
-                print(f'Your tax responsability value is: {taxation_data}%\n')
-
-            elif menu_input == '5':
-                input_tax = input('\nInput your tax duty in percentage:\n')
-                try:
-                    tax = int(input_tax)
-                    if tax >= 0:
-                        taxation = Taxation(tax, sheet)
-                        taxation.assigning_tax()
-                        print(('\nPlease, restart application to load '
-                               'the new tax calculations!'))
-                    else:
-                        print('Only positve numbers!')
-                except ValueError:
-                    print(f'\n"{input_tax}" not correct, please try again!')
-
-            elif menu_input == '6':
-                print(separator)
-                self.my_rss_news(url)
-
-            elif menu_input == '7':
+            try:
+                print(menu_list)
+                menu_input = input('Where do you want to go?:\n')
                 clear_screen()
 
-            elif menu_input == "8":
-                print('You have been disconnected!')
-                return
-            else:
+                if menu_input == '1':  # Asset
+                    pairs = self.assets_active[0]
+                    print(separator)
+                    print('Your current assets: \n')
+                    for asset in pairs:
+                        print(f'{asset}\n')
+
+                elif menu_input == '2':  # Transaction
+                    t_paris = self.transactions_active[0]
+                    print(separator)
+                    print('Your last 6 transactions: \n')
+                    for transaction in t_paris:
+                        print(f'{transaction}')
+
+                elif menu_input == '3':  # Data Analysis
+                    data_pairs = self.data_analysis_active[0]
+                    print(separator)
+                    print(("Overview:\n\n- Here, you'll have the ability "
+                        "to view your curr. asset portfolio.\n\n- The amount, "
+                        "prices, and associated taxes will be provided"
+                        "\nto help you analyze your potential profits and "
+                        "ascertain your tax obligations:\n"))
+                    for my_data in data_pairs:
+                        print(f'{my_data}')
+
+                elif menu_input == '4':  # Actual Tax Taxation
+                    taxation_data = int(self.taxation_active[0][0])
+                    print(separator)
+                    print(("In this section you can visualize the mount of taxes "
+                        "you have input\nwhen initiating the application, and "
+                        "all calculations\nwill be based on that input:\n"))
+                    print(f'Your tax responsability value is: {taxation_data}%\n')
+
+                elif menu_input == '5': # Update taxation
+                    try:
+                        input_tax = input('\nInput your tax duty in percentage:\n')
+                        tax = int(input_tax)
+                        if tax >= 0:
+                            taxation = Taxation(tax, sheet)
+                            taxation.assigning_tax()
+                            print(('\nPlease, restart application to load '
+                                'the new tax calculations!'))
+                        else:
+                            print('Only positve numbers!')
+                    except ValueError:
+                        print(f'\n"{input_tax}" not correct, please try again!')
+                    except KeyboardInterrupt:
+                        print("Key not accepted, please try again!")
+                        time.sleep(2)
+                        clear_screen()
+
+                elif menu_input == '6': # Get RSS News
+                    print(separator)
+                    self.my_rss_news(url)
+
+                elif menu_input == '7': # Refresh screen
+                    clear_screen()
+
+                elif menu_input == "8": # Exit app
+                    print('You have been disconnected!')
+                    return
+                else:
+                    clear_screen()
+                    print('Value not supported just yet, try again!')
+            except KeyboardInterrupt:
+                print("Key not accepted, please try again!")
+                time.sleep(2)
                 clear_screen()
-                print('Value not supported just yet, try again!\n')
 
 
 class User(object):
@@ -229,17 +238,21 @@ def login_input():
     print('For testing purposes use this data:\n'
           'Username: Tenam\nPassword: test123\n')
     while True:
-        username = input('Username:\n')
-        password = getpass('Password:\n')
-        login = User(username, password)
+        try:
+            username = input('Username:\n')
+            password = getpass('Password:\n')
+            login = User(username, password)
 
-        if login.user_validation():
-            clear_screen()
-            print('Loading enviroment for you, almost...')
+            if login.user_validation():
+                clear_screen()
+                print('Loading enviroment for you, almost...')
+                time.sleep(2)
+                clear_screen()
+                print('State: Login successful!\n')
+                break
+        except KeyboardInterrupt:
+            print("Key not accepted, please try again!")
             time.sleep(2)
-            clear_screen()
-            print('State: Login successful!\n')
-            break
 
 
 welcome_users(login_input)

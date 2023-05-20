@@ -236,11 +236,12 @@ def login_input():
         if login.user_validation():
             clear_screen()
             print('Loading enviroment for you, almost...')
+            time.sleep(2)
             clear_screen()
             print('State: Login successful!\n')
             break
 
 
-login_input()
+welcome_users(login_input)
 menu = Google_Portfolio()  # After login successfully launch Menu
 menu.menu(SHEET)

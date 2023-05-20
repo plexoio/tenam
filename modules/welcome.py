@@ -19,8 +19,8 @@ def welcome_users(login_func):
                 break
             else:
                 print('Wrong value entered, it has to be "Y"')
-                
+                time.sleep(2)
         except KeyboardInterrupt:
             print("Key not accepted, please try again!")
-            
+            time.sleep(2)
     return True

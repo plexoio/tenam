@@ -1,5 +1,8 @@
 import os  # Built-in module for clearing screen depending on OS
+import time
 
+# Global Variables
+bullet_point = "\u2022"
 
 def clear_screen():
     '''
@@ -7,3 +10,11 @@ def clear_screen():
     '''
     # Clear console for Windows, Linux, and macOS
     os.system('cls' if os.name == 'nt' else 'clear')
+
+def slow_type(string, delay=0.05):
+    '''
+    Time function to delay letter printing use end="" & flush=True
+    '''
+    for chr in string:
+        print(chr, end='', flush=True) # end='' for not \n & flush allows output buffer
+        time.sleep(delay)

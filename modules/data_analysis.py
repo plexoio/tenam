@@ -1,5 +1,5 @@
 from modules.taxation import Taxation, Get_Taxation
-
+from modules.utilities import bullet_point, slow_type
 
 class Data_Analysis(object):
     '''
@@ -36,13 +36,13 @@ class Data_Analysis(object):
                         for rows in analysis_values]
         analysis_pairs = []
 
-        my_actual_amount = '- '
-        my_old_price = '- Purchase price: '
-        my_new_price = '- Actual price: '
-        my_tax = '- Taxation: '
-        my_pay_tax = '- Calculated tax: '
-        my_profit = '- Calculated profit: '
-        in_future = f'- Foresight at 40% of the purchase price: '
+        my_actual_amount = f'{bullet_point} '
+        my_old_price = f'{bullet_point} Purchase price: '
+        my_new_price = f'{bullet_point} Actual price: '
+        my_tax = f'{bullet_point} Taxation: '
+        my_pay_tax = f'{bullet_point} Calculated tax: '
+        my_profit = f'{bullet_point} Calculated profit: '
+        in_future = f'\n{bullet_point} Calculated foresight profit at 40% from actual price (after tax): '
 
         taxation_data = int(self.taxation_active[0][0])
         push_data = self.sheet.worksheet('data_analysis')
@@ -65,8 +65,10 @@ class Data_Analysis(object):
             tax_pay = new_price * taxation_data / 100
             new_earn = new_price - int(tax_pay) - old_price
 
-            foresight = old_price * 40 / 100
-            futue_price = int(foresight) + old_price
+            actual_foresight = new_price * 40 / 100 + new_price
+            future_tax = actual_foresight * 10 /100
+            basic_profit = actual_foresight - future_tax
+            profit_foresight = int(basic_profit) - old_price
 
             push_data.update(f'D{i}', tax_pay)
             push_data.update(f'E{i}', new_earn)
@@ -78,7 +80,7 @@ class Data_Analysis(object):
                 f'{self.old_price}$\n{my_new_price}{self.new_price}$\n'
                 f'{my_tax}{taxation_data}%\n{my_pay_tax}{tax_pay}$\n'
                 f'{my_profit}{new_earn}$\n'
-                f'{in_future}{futue_price}$'
+                f'{in_future}{profit_foresight}$'
             )
             analysis_pairs.append(result_str)
             a += 1

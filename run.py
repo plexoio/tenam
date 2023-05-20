@@ -139,20 +139,20 @@ class Google_Portfolio(object):
                 elif menu_input == '3':  # Data Analysis
                     data_pairs = self.data_analysis_active[0]
                     print(separator)
-                    print(("Overview:\n\n- Here, you'll have the ability "
+                    print("Overview:\n\n- Here, you'll have the ability "
                         "to view your curr. asset portfolio.\n\n- The amount, "
                         "prices, and associated taxes will be provided"
                         "\nto help you analyze your potential profits and "
-                        "ascertain your tax obligations:\n"))
+                        "ascertain your tax obligations:\n")
                     for my_data in data_pairs:
                         print(f'{my_data}')
 
                 elif menu_input == '4':  # Actual Tax Taxation
                     taxation_data = int(self.taxation_active[0][0])
                     print(separator)
-                    print(("In this section you can visualize the mount of taxes "
+                    print("In this section you can visualize the mount of taxes "
                         "you have input\nwhen initiating the application, and "
-                        "all calculations\nwill be based on that input:\n"))
+                        "all calculations\nwill be based on that input:\n")
                     print(f'Your tax responsability value is: {taxation_data}%\n')
 
                 elif menu_input == '5': # Update taxation
@@ -162,8 +162,8 @@ class Google_Portfolio(object):
                         if tax >= 0:
                             taxation = Taxation(tax, sheet)
                             taxation.assigning_tax()
-                            print(('\nPlease, restart application to load '
-                                'the new tax calculations!'))
+                            print('\nPlease, restart application to load '
+                                'the new tax calculations!')
                         else:
                             print('Only positve numbers!')
                     except ValueError:
@@ -234,9 +234,11 @@ def login_input():
     '''
     Particular function to deal with login and validation
     '''
-    print('Welcome to Tenam, please login:\n')
-    print('For testing purposes use this data:\n'
-          'Username: Tenam\nPassword: test123\n')
+    print('Welcome to the login section, '
+            'for testing purposes use this data:\n\n'
+            'Username: Tenam\nPassword: test123\n'
+        )
+
     while True:
         try:
             username = input('Username:\n')

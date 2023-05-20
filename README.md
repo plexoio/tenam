@@ -215,40 +215,35 @@ We're excited to see how our project takes shape and how we continue to refine i
 
 #### Pallet
 
-The following color palette was used as a reference throughout the project:
-
-- [My Color Space](https://mycolor.space/?hex=%233498DB&sub=1)
-
+- It was not relevant for this iteration.
 
 ### Layout
 
-- The welcoming page features is a full-page banner with a `h2-sized` title and a `Swap` button to enter the system.
-
-- For the login section, `containers` and a `form` are used to manage it. All elements are well-connected and interactive, thanks to `JavaScript`.
-
-- The swapping sections for `Fiat & Crypto` are `containers` holding `forms` for the swapping functionality. In every section where a `submit or call-to-action` is present, the same style is used to maintain consistency.
-
-- The `contact form` also follows the consistency of the containers and features a powerful form and a related `submit button`, as mentioned before.
-
-- Finally, the layouts will naturally adjust to different `sizes` when media queries are set for `responsive design`.
+- The layout of the mockup command-line has been provided as seen before.
+- It is a rectangular block displaied on the right side up of the window.
+- It read the program in a black internal window where users interact.
+- All is very much static out of the command-line
 
 ### Fonts
 
-- We used `Roboto` for all fonts until specified otherwise. 
-
-- We used `Poppins` for some titles and subtitles.
+- They have added Arial as dedafult and we have changed it to 'font-family: 'Newsreader', Arial, serif;'
 
 ### Images
 
-- No additional images were needed, except for the `interactive logo` of a third-party service about `Metamask` on the login page.
+- No additional images were needed.
 
 ### Order
 
-- We prioritized the elements as already described throughout the different planes: Welcome page > Login Page > Fiat or Crypto Swap > Contact page.
-
-- The navbar and footer are always present (sticky) after the welcome page.
-
-- For the Contact page, a container similar to the others was applied to maintain consistency.
+- Inside the command line the menu list goes as follow:
+    - Assets
+    - Transaction
+    - Data Analysis
+    - Taxation
+    - Update Tax Value
+    - RSS News
+    - Refresh
+    - Exit
+- From simple to complex disclousure.
 
 ### Sequences
 

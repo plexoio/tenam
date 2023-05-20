@@ -1,3 +1,20 @@
+# STRATEGY PLANE
+
+## Index <a name="index"></a>
+
+1. [Strategy Plane - Reason, Solution and Value](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/strategy.md)
+2. [Scope Plane - Feature and Capability](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/scope.md)
+3. [Structure Plane - Content, Priority and Organization](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/structure.md)
+4. [Skeleton Plane - Layout, Interaction and Relationship](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/skeleton.md)
+5. [Surface Plane - Color, Typography, Effect and Images](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/surface.md)
+6. [Technologies Used](#technologies)
+7. [Actual Features Explained](#features)
+8. [Future Features Explained](#f-features)
+9. [Bugs & Testing Results](#bugs-testing)
+10. [Development Process](#development)
+11. [Deployment Process](#deployment)
+12. [Credits](#credits)
+
 ## Strategy Plane <a name="strategy-plane"></a> | [#](#index)
 
 Drawing upon years of personal experience and extensive local market research, we've discerned that the majority of people desire a seamless and secure way to access and manage their crypto assets. They want this without the need for intricate authentication, and without risking their account integrity, regardless of the crypto platform hosting their assets.

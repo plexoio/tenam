@@ -1,3 +1,20 @@
+# STRUCTURE PLANE
+
+## Index <a name="index"></a>
+
+1. [Strategy Plane - Reason, Solution and Value](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/strategy.md)
+2. [Scope Plane - Feature and Capability](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/scope.md)
+3. [Structure Plane - Content, Priority and Organization](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/structure.md)
+4. [Skeleton Plane - Layout, Interaction and Relationship](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/skeleton.md)
+5. [Surface Plane - Color, Typography, Effect and Images](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/surface.md)
+6. [Technologies Used](#technologies)
+7. [Actual Features Explained](#features)
+8. [Future Features Explained](#f-features)
+9. [Bugs & Testing Results](#bugs-testing)
+10. [Development Process](#development)
+11. [Deployment Process](#deployment)
+12. [Credits](#credits)
+
 ## Structure Plane <a name="structure-plane"></a> | [#](#index)
 
 This project is designed for everyone, although the level of difficulty may primarily cater to users with `accessibility` issues. The entire operation runs on a command-line interface that is highly user-friendly and straightforward, making it easy to understand the concept and actual functionalities.

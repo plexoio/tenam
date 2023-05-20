@@ -1,3 +1,20 @@
+# SCOPE PLANE
+
+## Index <a name="index"></a>
+
+1. [Strategy Plane - Reason, Solution and Value](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/strategy.md)
+2. [Scope Plane - Feature and Capability](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/scope.md)
+3. [Structure Plane - Content, Priority and Organization](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/structure.md)
+4. [Skeleton Plane - Layout, Interaction and Relationship](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/skeleton.md)
+5. [Surface Plane - Color, Typography, Effect and Images](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/surface.md)
+6. [Technologies Used](#technologies)
+7. [Actual Features Explained](#features)
+8. [Future Features Explained](#f-features)
+9. [Bugs & Testing Results](#bugs-testing)
+10. [Development Process](#development)
+11. [Deployment Process](#deployment)
+12. [Credits](#credits)
+
 ## Scope Plane <a name="scope-plane"></a> | [#](#index)
 
 Python posed a significant challenge, particularly due to the mental strain that the last two projects exerted. The timeframes were exceedingly short, leaving us with hardly any room to breathe or fully assimilate the information. However, we remained steadfast in our belief in simplicity while aiming to deliver a project that was not only demonstrative but also fully functional. Our strategy allowed us to visualize what we could achieve given the constraints of time, technology, and resources.

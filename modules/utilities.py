@@ -7,4 +7,3 @@ def clear_screen():
     '''
     # Clear console for Windows, Linux, and macOS
     os.system('cls' if os.name == 'nt' else 'clear')
-    print('\n' * 20)

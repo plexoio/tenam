@@ -6,4 +6,5 @@ def clear_screen():
     Used all around the code to clear console when needed to avoid overcrowding
     '''
     # Clear console for Windows, Linux, and macOS
-    os.system("clear")
+    print('\n' * 100)
+    os.system('cls' if os.name == 'nt' else 'clear')

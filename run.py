@@ -241,6 +241,6 @@ def login_input():
             break
 
 
-welcome_users(login_input)
+login_input()
 menu = Google_Portfolio()  # After login successfully launch Menu
 menu.menu(SHEET)

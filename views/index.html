@@ -10,7 +10,8 @@
             rows: 24
         });
         term.open(document.getElementById('terminal'));
-        term.writeln('Running startup command: python3 run.py. Rerun if app not loaded!');
+        term.writeln('Running startup command: python3 run.py.');
+        term.writeln('');
         term.writeln('Reload page if Tenam did not start running!');
         term.writeln('');
 
@@ -27,14 +28,19 @@
         // Set focus in the terminal
         document.getElementsByClassName("xterm-helper-textarea")[0].focus();
     </script>
-    <div>
+    <div id="app-info">
         <ul>
-            The current iteration of Tenam fetches and post dummy data to Google Sheets for the following:
+            <p>
+                The current iteration of Tenam fetches and post dummy data to Google Sheets for the following:
+            </p>
             <li>Assets</li>
             <li>Transactions</li>
             <li>Data Analysis</li>    
             <li>Taxation</li>
-            It dynamically processes the following:
+
+            <p>
+                It dynamically processes the following:
+            </p>
             <li>Taxation update</li>
             <li>RSS News</li>
             <li>Tax Analysis (after tax update)</li>

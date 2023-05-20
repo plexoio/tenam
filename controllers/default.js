@@ -1,12 +1,12 @@
-const Pty = require('node-pty');
-const fs = require('fs');
+import { spawn } from 'node-pty';
+import { writeFile } from 'fs';
 
-exports.install = function () {
+export function install () {
 
     ROUTE('/');
-    WEBSOCKET('/', socket, ['raw']);
+    socket('/', socket, ['raw']);
 
-};
+}
 
 function socket() {
 
@@ -16,7 +16,7 @@ function socket() {
     this.on('open', function (client) {
 
         // Spawn terminal
-        client.tty = Pty.spawn('python3', ['run.py'], {
+        client.tty = spawn('python3', ['run.py'], {
             name: 'xterm-color',
             cols: 80,
             rows: 24,
@@ -51,7 +51,7 @@ function socket() {
 
 if (process.env.CREDS != null) {
     console.log("Creating creds.json file.");
-    fs.writeFile('creds.json', process.env.CREDS, 'utf8', function (err) {
+    writeFile('creds.json', process.env.CREDS, 'utf8', function (err) {
         if (err) {
             console.log('Error writing file: ', err);
             socket.emit("console_output", "Error saving credentials: " + err);

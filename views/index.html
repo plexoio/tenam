@@ -15,8 +15,8 @@
         term.writeln('Reload page if Tenam did not start running!');
         term.writeln('');
 
-        var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
-            ':' + location.port) : '') + '/');
+        var ws = new WebSocket(location.protocol.replace('http', 'ws').replace('https', 'wss') + '//' + location.hostname + (location.port ? (':' + location.port) : '') + '/');
+
 
         ws.onopen = function () {
             new attach.attach(term, ws);
@@ -35,7 +35,7 @@
             </p>
             <li>Assets</li>
             <li>Transactions</li>
-            <li>Data Analysis</li>    
+            <li>Data Analysis</li>
             <li>Taxation</li>
 
             <p>

@@ -1,7 +1,5 @@
 <body>
-
     <button onclick="window.location.reload()">Run Program</button>
-
     <div id="terminal"></div>
 
     <script>
@@ -10,9 +8,7 @@
             rows: 24
         });
         term.open(document.getElementById('terminal'));
-        term.writeln('Running startup command: python3 run.py.');
-        term.writeln('');
-        term.writeln('Reload page if Tenam did not start running!');
+        term.writeln('Running startup command: python3 run.py');
         term.writeln('');
 
         var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
@@ -28,22 +24,4 @@
         // Set focus in the terminal
         document.getElementsByClassName("xterm-helper-textarea")[0].focus();
     </script>
-    <div id="app-info">
-        <ul>
-            <p>
-                The current iteration of Tenam fetches and post dummy data to Google Sheets for the following:
-            </p>
-            <li>Assets</li>
-            <li>Transactions</li>
-            <li>Data Analysis</li>    
-            <li>Taxation</li>
-
-            <p>
-                It dynamically processes the following:
-            </p>
-            <li>Taxation update</li>
-            <li>RSS News</li>
-            <li>Tax Analysis (after tax update)</li>
-        </ul>
-    </div>
 </body>

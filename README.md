@@ -225,7 +225,7 @@ We're excited to see how our project takes shape and how we continue to refine i
 
 ### Fonts
 
-- Initially, Arial was set as the default font, but we changed it to 'font-family: 'Newsreader', Arial, serif;'.
+- Initially, Arial was set as the default font, but we changed it to `font-family: 'Newsreader', Arial, serif;`.
 
 ### Images
 

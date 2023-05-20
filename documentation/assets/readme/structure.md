@@ -15,7 +15,7 @@
 11. [Deployment Process](#deployment)
 12. [Credits](#credits)
 
-## Structure Plane <a name="structure-plane"></a> | [#](#index)
+## Structure Plane <a name="structure-plane"></a> | 
 
 This project is designed for everyone, although the level of difficulty may primarily cater to users with `accessibility` issues. The entire operation runs on a command-line interface that is highly user-friendly and straightforward, making it easy to understand the concept and actual functionalities.
 

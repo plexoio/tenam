@@ -15,7 +15,7 @@
 11. [Deployment Process](#deployment)
 12. [Credits](#credits)
 
-## Surface Plane <a name="surface-plane"></a> | [#](#index)
+## Surface Plane <a name="surface-plane"></a> | 
 
 This time, we didn't need wireframes or extensive discussions about the front-end part since that was provided by 'Code Institute'. We considered the ideas and constraints within the framework they provided.
 

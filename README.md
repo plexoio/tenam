@@ -1,23 +1,26 @@
 # Tenam - A Crypto Portfolio Tracker
 
-Tenam - your comprehensive cryptocurrency portfolio tracker. This dynamic tool consolidates all your crypto investments into a single interface, negating the need to individually access each platform. 
-For the present phase, we're utilizing static data from gspread, acknowledging the open and sensitive nature of project delivery on GitHub.
+Tenam is a comprehensive `cryptocurrency portfolio tracker`. This dynamic tool consolidates all your crypto investments into a single interface, negating the need to individually access each platform. 
 
-Tenam emphasizes seamless portfolio access, rich statistical analysis, and timely crypto market updates with a single click. However, our vision extends beyond merely displaying your crypto amounts and their corresponding dollar values. We're committed to creating an investment-focused experience for our users. This includes accounting for country-specific tax implications linked to cryptocurrency liquidations and transactions. To facilitate this, Tenam includes a transaction sheet that diligently records all deposits and withdrawals.
+- For the present phase, we're utilizing `static data` from gspread, acknowledging the open and sensitive nature of project delivery on GitHub.
 
-Tenam is equipped with robust features like current price comparisons against portfolio values, coin filtering, and historical value analysis. This empowers you with insightful retrospection (past values) and foresight (future values) regarding your holdings.
+Tenam emphasizes seamless portfolio access, rich statistical analysis, and timely crypto market updates with a single click. However, our vision extends beyond merely displaying your crypto amounts and their corresponding dollar values. We're committed to creating an `investment-focused experience` for our users. This includes accounting for country-specific tax implications linked to cryptocurrency liquidations. 
 
-In this iteration, all can be accessed only through a `command-line interface`.
+- Tenam includes as well a transaction sheet that diligently records all deposits and withdrawals.
 
-For future implementations, we aim to establish direct connections with leading cryptocurrency exchanges such as Binance and Coinbase for real-time portfolio management. 
+Tenam is equipped with robust features like current `price comparisons` against portfolio values, coin filtering (future implementation), future and historical value analysis. This empowers you with insightful retrospection `past values` and foresight `future values` regarding your holdings.
 
-Please note: While Tenam is designed to be a valuable tool for managing your cryptocurrency investments, it should not serve as a substitute for professional financial advice. It's essential to conduct your own research and consider consulting with a financial advisor prior to making any investment decisions.
+- In this iteration, all can be accessed only through a `command-line interface`.
 
-Please note that this project is not available for public deployment; **it is intended solely for learning and demonstration purposes** even though is ready for use.
+For future implementations, we aim to establish direct connections with leading cryptocurrency exchanges such as `Binance` and `Coinbase` for real-time portfolio management. 
+
+**Please note (DISCLAIMER):** While Tenam is designed to be a valuable tool for managing your cryptocurrency investments, it should not serve as a substitute for professional financial advice. It's essential to conduct your own research and consider consulting with a financial advisor prior to making any investment decisions.
+
+Please note that this current iteration is not available for public deployment; **it is intended solely for learning and demonstration purposes** even though is ready for use.
 
 ![Responsive Mockup image](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/mockup.png)
 
-**Preview Link:** [Tenam](https://tenam-crypto.herokuapp.com/) - reload the page several times if an error occurs
+**Preview Link:** [Tenam](https://tenam-crypto.herokuapp.com/)
 
 
 ## [Index - Return](https://github.com/plexoio/tenam/blob/main/README.md)

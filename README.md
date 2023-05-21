@@ -14,7 +14,7 @@ Tenam is equipped with robust features like current `price comparisons` against 
 
 For future implementations, we aim to establish direct connections with leading cryptocurrency exchanges such as `Binance` and `Coinbase` for real-time portfolio management. 
 
-**Please note (DISCLAIMER):** While Tenam is designed to be a valuable tool for managing your cryptocurrency investments, it should not serve as a substitute for professional financial advice. It's essential to conduct your own research and consider consulting with a financial advisor prior to making any investment decisions.
+- **DISCLAIMER:** While Tenam is designed to be a valuable tool for managing your cryptocurrency investments, it should not serve as a substitute for professional financial advice. It's essential to conduct your own research and consider consulting with a financial advisor prior to making any investment decisions.
 
 Please note that this current iteration is not available for public deployment; **it is intended solely for learning and demonstration purposes** even though is ready for use.
 

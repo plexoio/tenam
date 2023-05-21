@@ -30,7 +30,8 @@ We made use of the following technologies throughout the entire project lifespan
 - **[Python Tutur](https://pythontutor.com/)**: For debugging and to understand how the code works.
 - **[Slack Community](https://slack.com/)**: Community created by Code Institute for coding issues and course management.
 - **[Calendly](https://calendly.com/)**: To control mentor's appointments
--**[Google Translate](https://translate.google.com/)**: To improve English content
+- **[Google Sheets](https://docs.google.com/spreadsheets/u/0/)**: To store, fetch and update data from the app
+- **[Google Translate](https://translate.google.com/)**: To improve English content
 - **Google Developer Tools**: Employed for comprehensive testing and debugging.
 - **GitHub**: Used as the foundation for our repositories and version control.
 - **Git Bash**: An essential tool for version control and project management.

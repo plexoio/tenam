@@ -26,8 +26,7 @@ Python posed a significant challenge, particularly due to the mental strain that
 |---|---|---|
 |Limited use|Data Analysis<br>Transaction History<br>RSS News<br>Taxation and Tax Update|Culture acquisition|
 |Simple design|Portfolio Display<br>Menu<br>Login<br>Welcome<br>Add, Delete, Update|Tech Showcase|
-|Low leading rates<br>& Non-functional| RSS News|Long-term Investment<br>& Future Implementation|
-
+|Low leading rates<br>& Non-functional| RSS News <br> Add, Delete, Update|Long-term Investment<br>& Future Implementation|
 
 - As we can observe, the first items on our list are the most achievable. We plan to draft the starting points for those tagged as future implementation to ensure clarity, enhance user experience, and effectively communicate our message.
 

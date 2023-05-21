@@ -1,6 +1,7 @@
 from modules.utilities import clear_screen
 import time
 
+
 class Taxation(object):
     '''
     Part of the main object instance (Google_Sheet)

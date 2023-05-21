@@ -3,7 +3,11 @@ import time
 from modules.utilities import bullet_point, slow_type, BOLD, RESET
 from textwrap import fill
 
+
 def welcome_users(login_func):
+    '''
+    Print welcome message and validate human with Y to enter
+    '''
     while True:
         clear_screen()
         brand = f"{BOLD}WELCOME TO TENAM!{RESET}\n"

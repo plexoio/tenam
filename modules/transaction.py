@@ -4,6 +4,9 @@ class Transaction(object):
     '''
 
     def __init__(self, sheet):
+        '''
+        Initiate sheet parameter and instance variable to pass it around
+        '''
         self.sheet = sheet
 
     def my_transactions(self):

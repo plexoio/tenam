@@ -1,6 +1,7 @@
 from modules.taxation import Taxation, Get_Taxation
 from modules.utilities import bullet_point, BOLD, RESET, slow_type
 
+
 class Data_Analysis(object):
     '''
     Part of the main object instance (Google_Sheet)
@@ -27,6 +28,7 @@ class Data_Analysis(object):
         current_taxation = self.taxation.my_tax(sheet)  # GET Taxation's func
         self.taxation_active.append(current_taxation)  # STORE Tax's values
 
+        # Process Data Analysis
         data_analysis = self.sheet.worksheet('data_analysis')
         my_analysis = data_analysis.get_all_values()
         title_analysis = my_analysis[0]
@@ -47,11 +49,11 @@ class Data_Analysis(object):
         taxation_data = int(self.taxation_active[0][0])
         push_data = self.sheet.worksheet('data_analysis')
 
-        i = 2  # Move values in Google Sheet
-
-        a = 0
+        i = 2  # Move values in Google Sheet (loop)
+        a = 0  # Get amount and currency from Assets (loop)
         my_amount = self.assets_active[0]
         nums = []
+
         for asset in my_amount:
             nums.append(asset)
 
@@ -59,26 +61,29 @@ class Data_Analysis(object):
             self.old_price = int(pairs.get('old_price'))
             self.new_price = int(pairs.get('new_price'))
 
+            # Basic calculations
             old_price = self.old_price
             new_price = self.new_price
             tax_pay = int(new_price * taxation_data / 100)
             new_earn = new_price - tax_pay - old_price
 
-            if new_earn < 0: 
-                final_lost = f'\n{bullet_point} {BOLD}At LOSS with:{RESET} {new_earn}$'
+            # Feedback Conditions
+            if new_earn < 0:
+                final_lost = f'\n{bullet_point} {BOLD}LOSS:{RESET} {new_earn}$'
             elif new_earn > 0:
-                final_lost = f'\n{bullet_point} {BOLD}At WIN with:{RESET} {new_earn}$'
+                final_lost = f'\n{bullet_point} {BOLD}WIN:{RESET} {new_earn}$'
             else:
-                final_lost = f'\n{bullet_point} {BOLD}Profit neutrality:{RESET} {new_earn}$'
+                final_lost = f'\n{bullet_point} {BOLD}NONE:{RESET} {new_earn}$'
 
+            # Foresight Calculations
             actual_foresight = int(new_price * 40 / 100 + new_price)
-            future_tax = int(actual_foresight * 10 /100)
+            future_tax = int(actual_foresight * 10 / 100)
             basic_profit = actual_foresight - future_tax
             profit_foresight = basic_profit - old_price
 
+            # Push to Google Sheet
             push_data.update(f'D{i}', tax_pay)
             push_data.update(f'E{i}', new_earn)
-
             i += 1  # Move values in Google Sheet
 
             result_str = (
@@ -91,6 +96,10 @@ class Data_Analysis(object):
                 f'{in_future}{profit_foresight}$'
                 f'{final_lost}'
             )
+
+            # Ready to print
             analysis_pairs.append(result_str)
-            a += 1
+
+            a += 1  # Get assets values
+
         return analysis_pairs

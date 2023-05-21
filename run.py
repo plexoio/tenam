@@ -5,7 +5,9 @@ import textwrap
 import feedparser
 from google.oauth2.service_account import Credentials
 import gspread
-from modules.utilities import bullet_point, BOLD, RESET, clear_screen, slow_type
+from modules.utilities import (  # allow to span multiple lines
+    bullet_point, BOLD, RESET, clear_screen, slow_type
+)
 from modules.taxation import Taxation, Get_Taxation
 from modules.data_analysis import Data_Analysis
 from modules.transaction import Transaction
@@ -95,7 +97,7 @@ class Google_Portfolio(object):
         '''
         # Assembling variables for Menu
 
-        # RSS
+        # Set RSS URL
         url = ('https://www.coindesk.com/arc/outboundfeeds/rss/'
                '?outputType=xml')
 
@@ -105,7 +107,6 @@ class Google_Portfolio(object):
             '8. Exit\n')
 
         # GET Asset's class function
-        # Get Asset class function
         current_pairs = self.asset.assets_display(SHEET)
         self.assets_active.append(current_pairs)
 
@@ -121,7 +122,7 @@ class Google_Portfolio(object):
         current_taxation = self.taxation.my_tax(SHEET)
         self.taxation_active.append(current_taxation)
 
-        # MENU starts
+        # MENU Conditions
         while True:
             try:
                 print(menu_list)
@@ -131,7 +132,7 @@ class Google_Portfolio(object):
                 if menu_input == '1':  # Asset
                     pairs = self.assets_active[0]
                     print(separator1)
-                    print('Here you can visualize all your current crypto holdings.\n')
+                    print('Section to visualize your crypto holdings.\n')
                     for asset in pairs:
                         print(f'{bullet_point} {asset}')
 
@@ -142,16 +143,17 @@ class Google_Portfolio(object):
                     a = 0
                     for transaction in t_paris:
                         a += 1
-                        print(f'\n{bullet_point} {BOLD}BLOCKCHAIN BLOCK {a}{RESET}\n')
+                        print(f'\n{bullet_point} {BOLD}BLOCK {a}{RESET}\n')
                         print(f'{transaction}')
 
                 elif menu_input == '3':  # Data Analysis
                     data_pairs = self.data_analysis_active[0]
 
                     print(separator3)
-                    data_describe = ("Based on your assets, old price, new price and tax value, "
-                    "we have analized your data for insightful retrospection "
-                    "and foresight regarding your holdings.")
+                    data_describe = ("Based on your assets, prices & taxes, "
+                                     "we have analized the data for insightful"
+                                     " retrospection and foresight "
+                                     "regarding your holdings.")
                     print(fill(data_describe, 80))
 
                     for my_data in data_pairs:
@@ -160,39 +162,39 @@ class Google_Portfolio(object):
                 elif menu_input == '4':  # Actual Tax Taxation
                     taxation_data = int(self.taxation_active[0][0])
                     print(separator4)
-                    taxation_describe = ("Default tax value or the one you input "
-                        "when updating your taxation.")
+                    taxation_describe = ("Default tax value or input "
+                                         "when updating your taxation.")
                     print(fill(taxation_describe, 80))
-                    print(f'\n{bullet_point} Current taxation: {taxation_data}%')
+                    print(f'\n{bullet_point} Current tax: {taxation_data}%')
 
-                elif menu_input == '5': # Update taxation
+                elif menu_input == '5':  # Update taxation
                     print(separator5)
                     try:
-                        print('Any changes here will affect your Data Analysis section.\n')
-                        input_tax = input('Input your tax duty in percentage:\n')
+                        print('Changes here will affect your Data Analysis.\n')
+                        input_tax = input('Input tax duty in percentage:\n')
                         tax = int(input_tax)
                         if tax >= 0:
                             taxation = Taxation(tax, sheet)
                             taxation.assigning_tax()
                             print('Please, restart application to load '
-                                'the new tax calculations!')
+                                  'the new tax calculations!')
                         elif tax < 0:
                             print('EROR: Please, input only positve numbers!')
                     except ValueError:
-                        slow_type(f'\n"{input_tax}" input not correct, please try again!')
+                        slow_type(f'\n"{input_tax}" not correct, try again!')
                     except KeyboardInterrupt:
                         slow_type(" Key not accepted, please try again!")
                         time.sleep(2)
                         clear_screen()
 
-                elif menu_input == '6': # Get RSS News
+                elif menu_input == '6':  # Get RSS News
                     print(separator6)
                     self.my_rss_news(url)
 
-                elif menu_input == '7': # Refresh screen
+                elif menu_input == '7':  # Refresh screen
                     clear_screen()
 
-                elif menu_input == "8": # Exit app
+                elif menu_input == "8":  # Exit app
                     slow_type('You have been disconnected!\n')
                     return
                 else:
@@ -236,8 +238,8 @@ class User(object):
                 pass
             else:
                 slow_type('The Username: "{}" OR Password: "{}" did not match '
-                      'with our records.\n'
-                      .format(self.username, self.password))
+                          'with our records.\n'
+                          .format(self.username, self.password))  # Dynamic
                 return False
         return True
 
@@ -247,9 +249,8 @@ def login_input():
     Particular function to deal with login and validation
     '''
     print(f'Welcome to the login section, '
-            f'for testing purposes use this data:\n\n'
-            f'{bullet_point} Tenam\n{bullet_point} test123'
-        )
+          f'for testing purposes use this data:\n\n'
+          f'{bullet_point} Tenam\n{bullet_point} test123')
 
     while True:
         try:
@@ -264,11 +265,13 @@ def login_input():
                 clear_screen()
                 print(f'{BOLD}State:{RESET} Menu loaded successfully!')
                 break
+
         except KeyboardInterrupt:
             slow_type(" Key not accepted, please try again!")
             time.sleep(2)
 
 
+# Initiate app
 welcome_users(login_input)
 menu = Google_Portfolio()  # After login successfully launch Menu
 menu.menu(SHEET)

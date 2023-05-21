@@ -17,32 +17,36 @@
 
 ## Actual Features Explained<a name="features"></a>
 
-Most of the features were implemented as planned based on the user-centric design, but we were unable to develop two features properly due to time constraints: a proper `currency converter` and a proper `contact form`.
+We were very satified with the results even though we thought we did not have time to fulfill our plans. At the end we only can say that all features should be developed further in the future and that for this iteration the simpliest design goes to, the ability to add, delete and update, calculations based on deposits and withdrawals, general caltulations, coin filtering (future implementation) and assets foresight and retrospection
 
 The following features were essential for our MVP:
 
-### Index.html
+## Index.html
 
-#### Welcome Page
+### Mockup command-line interface
 
-The welcome page is an essential feature that informs users of their location and purpose. It is also useful for marketing purposes.
+What we have developed furthur around the interface, like the background color and the info section under it was not really a requiremente for the project but we thought it necessary to add. Therefore, in this section we will only speak about the features that happen inside the command line.
 
-![Welcome Page](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/welcome.png)
+#### Welcome Section
 
-#### Header
-The branding logo is located on the left side of the screen, following the current convention. It also functions as a refreshing button when located on the index.html. On the right side, we have the navbar, which is easy to find, not overloaded, and practical:
+The welcome section holds an informative section to tell the user
+s where they are and what are the next steps to follow, an input takes place to assure the user is a human and not a robot.
 
-- Fiat > Crypto > Contact
-
-![header](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/header.png)
+![Welcome section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/welcome.png)
 
 #### Login Section
 
-The login section is crucial for validating users' identities and can be achieved using traditional technologies or Metamask (Web3).
+The login section tells the users again where they are and what steps they can follow, we have provided them with important login information to test the app. As seen from the image below the login input can be validate or handle errors.
 
-The login form is fully interactive, user-friendly, and enjoyable to use.
+![Login section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/login.png)
 
-![Login](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/login.png)
+#### Menu Section
+
+The menu is the powerful section of the app the portal to all the main features, displaied as list and accesible with an input, it keeps bwing interactice, userfriendly and enjoyable to use.
+
+By simply inputting a number users can be visit the various internal features to understand their crypto portfolio.
+
+![Menu section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/menu.png)
 
 #### Fiat Swap
 
@@ -52,7 +56,7 @@ The feature allows users to swap numbers and update balances. Most buttons withi
 
 Don't forget to give the switching button a try!
 
-![Fiat](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/fiat.png)
+![Fiat](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/fiat.png)
 
 #### Crypto Swap
 
@@ -62,13 +66,13 @@ While both the fiat and crypto sections are for demonstration purposes, they sho
 
 Don't forget to give the switching button a try!
 
-![Crypto](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/crypto.png)
+![Crypto](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/crypto.png)
 
 #### Footer
 
 At the final part of the index.html, we have our footer. Users can also find it on the contact.html page. The footer features the primary color of the project and is also sticky, meaning it will stay visible even when the user scrolls down the page. It contains important information, like a crypto widget, links to social media accounts, and copyright information. 
 
-![footer](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/footer.png)
+![footer](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/footer.png)
 
 ### contact.html
 
@@ -78,7 +82,7 @@ In this section, we planned a more sophisticated contact form that would have be
 
 The welcome page here is is also an essential feature that informs users of their location and purpose. It is also useful for marketing purposes.
 
-![Welcome Contact Page](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/contact.png)
+![Welcome Contact Page](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/contact.png)
 
 #### Contact Section
 
@@ -86,7 +90,7 @@ The current contact form is still fully functional, interactive, and useful. It 
 
 The header and footer sections are repeated throughout the website to maintain consistency and improve the overall user experience.
 
-![Contact](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/contact-page.png)
+![Contact](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/contact-page.png)
 
 ## Bugs & Testing
 
@@ -114,7 +118,7 @@ Currently, social media buttons only point to the main pages for demonstration p
 
 #### Other bugs
 
-For other related bugs, we recommend always refreshing the page or deleting cache files. The problem is not with the Bitplexo project; it could be related to third-party issues or related to your own device settings and capabilities.
+For other related bugs, we recommend always refreshing the page or deleting cache files. The problem is not with the tenam project; it could be related to third-party issues or related to your own device settings and capabilities.
 
 ## Testing
 
@@ -128,7 +132,7 @@ During the development process, we constantly tested to ensure that we delivered
 
 We used a Screen Reader created by Google to test our site's accessibility. As a result, we improved the aria-label of some features. Our Lighthouse devtools test results for accessibility were as follows:
 
-![Accessibility results](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/access.png)
+![Accessibility results](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/access.png)
 
 #### HTML & CSS Validation
 
@@ -136,19 +140,19 @@ We used the official W3C Markup Validation Service to test our site's HTML and C
 
 ##### index.html and contact.html
 
-![HTML validation](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/html.png)
+![HTML validation](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/html.png)
 
 #### GT-metrix Performance
 
 After using GT-Metrix we realized that our site is doing quite well with an 88% in performance. We took their suggestions on improving cached files by adding our `.htaccess` with the necessary values.
 
-![GT-metrix Result](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/gtmetrix.png)
+![GT-metrix Result](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/gtmetrix.png)
 
 #### CSS Validation
 
 This test represents all the .css files `style.css`, `contact.css`, `swap.css` and `media.css` queries. Since we were constantly testing our CSS, the result was as follows:
 
-![CSS Validation](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/css.png)
+![CSS Validation](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/css.png)
 
 - Note: it does not mean the CSS is perfect.
 
@@ -156,7 +160,7 @@ This test represents all the .css files `style.css`, `contact.css`, `swap.css` a
 
 We ran manual tests on different devices to ensure that our media queries were working 100%. We made final improvements to it, and now we believe it's suitable for most screen sizes. Here is the insight shot:
 
-![Responsive Mockup image](https://github.com/plexoio/bitplexo/blob/main/documentation/assets/img/responsive.png)
+![Responsive Mockup image](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/responsive.png)
 
 
 #### Security
@@ -196,7 +200,7 @@ We faced several challenges during the planning, documentation, and coding proce
 
 In future iterations, we plan to develop the `index` and `contact` pages further, particularly the `index` with the `Metamask Login`.
 
-We are satisfied with our first iteration of Bitplexo, as users learn about this emerging technology and the financial institution informs them about upcoming developments. Radical changes are not always positive, so building and deploying this project was an excellent idea.
+We are satisfied with our first iteration of tenam, as users learn about this emerging technology and the financial institution informs them about upcoming developments. Radical changes are not always positive, so building and deploying this project was an excellent idea.
 
 ## Future Implementations <a name="future"></a> | [#](#index)
 
@@ -214,7 +218,7 @@ We had a tight timeframe of only three weeks to build this MVP project using hea
 
 - `Better SSL badge:` We planned to include a better SSL badge to demonstrate to users that they are not on a phishing website. Unfortunately, we were unable to include it in this iteration due to time constraints.
 
-We look forward to including these features and more in future iterations of Bitplexo.
+We look forward to including these features and more in future iterations of tenam.
 
 ## Deployment Process <a name="deployment"></a> | [#](#index)
 
@@ -256,7 +260,7 @@ In this way, we were able to deploy our project successfully with no major issue
 - [ChatGPT](https://chat.openai.com/chat), was used for the following queries:
 
 1. Used for quick general consulting.
-2. Used to convert a HTML code to a Markdown table for the README.md file. As seen from our extended self-coded versions: [strategy-table](https://github.com/plexoio/bitplexo/blob/main/documentation/extended-versions/strategy-table.html).
+2. Used to convert a HTML code to a Markdown table for the README.md file. As seen from our extended self-coded versions: [strategy-table](https://github.com/plexoio/tenam/blob/main/documentation/extended-versions/strategy-table.html).
 3. Copywriting and proofreading.
 4. Used to validate HTML and styling codes.
 5. Used to confirm whether or not my code snippet is correct after hours of self-debugging on `Javascript`.

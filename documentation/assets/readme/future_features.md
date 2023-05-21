@@ -19,27 +19,27 @@
 
 In this section, we'll discuss potential enhancements for the next iteration of the Tenam crypto portfolio tracker.
 
-### Enhanced Validation and Error Handling
+- ### Enhanced Validation and Error Handling
 
 While we've effectively implemented validation and error handling for all user interactions and inputs in the current version, we believe there is room for more granular improvement. This enhancement will handle any unexpected inputs users might enter, either intentionally or accidentally.
 
-### Delete, Add, and Update Capabilities
+- ### Delete, Add, and Update Capabilities
 
 In the current iteration, we've offered basic functionalities for deleting, adding, and updating information, albeit limited. In the next iteration, we aim to give users more control over their data, providing a more flexible and user-centric experience.
 
-### Advanced Data Analysis
+- ### Advanced Data Analysis
 
 Our data analysis feature is robust, but there's always room for expansion. We envision making it more granular, scientific, and finance-centered in the future. For instance, incorporating an analysis of withdrawals and deposits could provide more comprehensive insights.
 
-### Coin Filtering
+- ### Coin Filtering
 
 Implementing a coin filtering feature could be incredibly beneficial for users interested in analyzing specific data sets. By hiding non-essential information, we could enhance user-friendliness and reduce the likelihood of misinterpretation leading to poor decision-making.
 
-### Foresight and Retrospection
+- ### Foresight and Retrospection
 
 Understanding past trends and predicting future ones are crucial in crypto investing, much like in any other stock market. Enhancing the data analysis capabilities for past, present, and future market trends would undoubtedly prove valuable.
 
-### Enhanced RSS News
+- ### Enhanced RSS News
 
 The potential for displaying important market or blockchain industry information is vast. Features like a screen reader or a user-friendly article display could help users stay informed, learn, and enjoy updates from the crypto world.
 

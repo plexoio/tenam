@@ -1,4 +1,4 @@
-# SURFACE PLANE
+# Surface Plane
 
 ## [Index - Return](https://github.com/plexoio/tenam/blob/main/README.md)
 
@@ -15,71 +15,79 @@
 11. [Deployment Process](#deployment)
 12. [Credits](#credits)
 
-## Surface Plane <a name="surface-plane"></a> | 
+## Surface Plane <a name="surface-plane"></a>
 
-This time, we didn't need wireframes or extensive discussions about the front-end part since that was provided by 'Code Institute'. We considered the ideas and constraints within the framework they provided.
+At this juncture, we had no need for wireframes or extensive front-end discussions since the 'Code Institute' readily provided these as noted and tagged on the strategy plane. We worked within the ideas and constraints the provided framework offered.
 
-Initially, we underestimated the importance of following the UX design sequence. However, we were pleasantly surprised by its effectiveness when properly implemented. Hence, we can confidently say that all planes were essential to reach this point (Surface). We understand that it's during the building or coding phase that we may discover any gaps or oversights, albeit in a back-end manner.
+At the outset, we didn't fully appreciate the significance of adhering to the UX design sequence. However, its effectiveness when properly applied surprised us. Consequently, we can confidently affirm that every plane was vital in arriving at this point (Surface). We recognize that it's during the coding or building phase that we might uncover any gaps or oversights, usually from a `back-end perspective`.
 
-We're excited to see how our project takes shape and how we continue to refine it along the way.
+As our project continues to evolve and take shape, we're enthusiastic about the progress and refinements we'll be making.
 
 ### Color
 
-- Default colors provided by 'Code Institute' template.
+- The 'Code Institute' template provided the default colors.
+- We updated the background color to `#3498db`.
 
 #### Palette
 
-- Not relevant for this iteration.
+- Not applicable in this iteration.
 
 ### Layout
 
-- The layout of the mockup command-line has been provided as seen before.
-- It appears as a rectangular block displayed on the upper right side of the window.
-- It presents the program within a black internal window where users interact.
-- Everything outside the command-line remains static.
+- The layout for the mockup command-line was pre-provided.
+- The command-line presents as a rectangular block situated in the upper right corner of the window.
+- The program is displayed within a black internal window, serving as the interaction point for users.
+- All aspects outside the command-line remain static.
+- A welcome section with relevant information and an input for proceeding is available.
+- The login section offers instructions and inputs.
+- The Menu section lists features along with an input for navigation.
+- We present all information within the same terminal, adding bullet points and bold text as needed for emphasis.
+- To create divisions and improve readability, we implemented custom separators.
+- Beneath the terminal, we designed an informational section to provide users with a preview of upcoming content.
+- As a fun addition, we incorporated a script that displays cryptocurrency prices.
 
 ### Fonts
 
-- Initially, Arial was set as the default font, but we changed it to `font-family: 'Newsreader', Arial, serif;`.
+- We replaced the initial Arial default font with `font-family: 'Newsreader', Arial, serif`.
 
 ### Images
 
-- No additional images were needed.
+- There was no need for additional images.
 
 ### Order
 
-- Inside the command line, the menu list follows this order:
+- The menu list within the command line follows this order:
     - Assets
-    - Transaction
+    - Transactions
     - Data Analysis
     - Taxation
     - Update Tax Value
     - RSS News
     - Refresh
     - Exit
-- The order reflects a progression from simple to complex disclosure.
+- The order signifies a progression from simple to complex.
 
 ### Sequences
 
-- Paying attention to `progressive disclosure` allowed us to build a smooth application flow. Users first see the welcome page, then they are directed to log in. Once logged in, they can easily access the various features from the menu.
+- Observance of `progressive disclosure` enabled us to construct a fluid application flow. Users initially encounter the welcome page, which directs them to log in. Post login, users can easily access various features from the Menu.
 
-- The features aim to provide readable content, and users have the option to refresh the window or exit at any time.
+- The features offer readable content, and users have the option to refresh the window or exit at any point.
 
-For each section and interaction, we considered economy, making the most important elements easily recognizable. We noticed many patterns throughout the product layouts and interactions. It was designed to be readable, with colors provided by the 'Code Institute' template creating good contrasts. We added different fonts when necessary.
+As we crafted each section and interaction, we prioritized the economy of design by ensuring the most crucial elements are easily recognizable. The product layouts and interactions revealed numerous patterns. The template provided by the 'Code Institute' allowed for good color contrasts and readability. We also introduced different fonts where necessary.
 
-We ensured that users cannot get lost on the site, as we made value evident throughout.
+We designed the site to prevent users from getting lost and consistently showcased value.
 
-**We focused on the following concerns:**
+**Our design focused on these elements:**
 
 - Repetition
 - Contrast
 - Proximity
 - Alignment
-- Accessibility (although not 100% attainable)
+- Accessibility (although not fully achievable)
 - Interaction
-- Visual engagement
-- Easy learning experience
+- Visual Engagement
+- Ease of Learning
 
-We aimed to keep things as simple as possible, presenting fewer choices to the users while highlighting concrete features and content to fulfill our mission for this MVP.
+Our aim was to maintain simplicity by presenting users with fewer choices while emphasizing concrete features and content to realize our MVP goal.
 
-After considering these factors, we were able to turn our ideas from the skeleton and surface into code with ease. The coding process was less complicated and more enjoyable, despite different challenges. This approach required less time, energy, and other resources, resulting in less human work, fewer errors, and ultimately, a superior product, even though we are dealing with a backend project.
+In light of these considerations, the transition of our ideas from the skeleton and surface into code was smooth. The coding process was less complex and more enjoyable, despite the various challenges. This approach saved time, energy, and other resources, leading to reduced human workload, fewer errors, and, ultimately, a superior product - even though we were primarily dealing with a backend project.

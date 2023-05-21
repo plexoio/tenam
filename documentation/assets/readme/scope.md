@@ -7,13 +7,13 @@
 3. [Structure Plane - Content, Priority and Organization](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/structure.md)
 4. [Skeleton Plane - Layout, Interaction and Relationship](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/skeleton.md)
 5. [Surface Plane - Color, Typography, Effect and Images](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/surface.md)
-6. [Technologies Used](#technologies)
-7. [Actual Features Explained](#features)
-8. [Future Features Explained](#f-features)
-9. [Bugs & Testing Results](#bugs-testing)
-10. [Development Process](#development)
-11. [Deployment Process](#deployment)
-12. [Credits](#credits)
+6. [Technologies Used](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/technologies.md)
+7. [Actual Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/actual_features.md)
+8. [Future Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/future_features.md)
+9. [Bugs & Testing Results](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/bugs_testing.md)
+10. [Development Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
+11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
+12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
 ## Scope Plane <a name="scope-plane"></a>
 

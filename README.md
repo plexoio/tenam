@@ -20,7 +20,9 @@ Please note that this current iteration is not available for public deployment; 
 
 ![Responsive Mockup image](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/mockup.png)
 
-**Preview Link:** [Tenam](https://tenam-crypto.herokuapp.com/)
+- **Preview Link:** [Tenam](https://tenam-crypto.herokuapp.com/)
+
+- **Google Sheet** [Portfolio](https://docs.google.com/spreadsheets/d/1IEaXqnPewHWOS8JB6kf074AWygVKgqplSE1WjHs-T28/edit?usp=sharing)
 
 
 ## [Index - Return](https://github.com/plexoio/tenam/blob/main/README.md)

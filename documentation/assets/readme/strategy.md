@@ -15,7 +15,7 @@
 11. [Deployment Process](#deployment)
 12. [Credits](#credits)
 
-## Strategy Plane <a name="strategy-plane"></a> | 
+## Strategy Plane <a name="strategy-plane"></a>
 
 Drawing upon years of personal experience and extensive local market research, we've discerned that the majority of people desire a `seamless` and `secure way` to access and manage their crypto assets. They want this without the need for intricate authentication, and without risking their account integrity, regardless of the crypto platform hosting their assets.
 

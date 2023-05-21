@@ -15,7 +15,7 @@
 11. [Deployment Process](#deployment)
 12. [Credits](#credits)
 
-## Scope Plane <a name="scope-plane"></a> | 
+## Scope Plane <a name="scope-plane"></a>
 
 Python posed a significant challenge, particularly due to the mental strain that the last two projects exerted. The timeframes were exceedingly short, leaving us with hardly any room to breathe or fully assimilate the information. However, we remained steadfast in our belief in simplicity while aiming to deliver a project that was not only demonstrative but also `fully functional`. Our strategy allowed us to visualize what we could achieve given the constraints of time, technology, and resources.
 

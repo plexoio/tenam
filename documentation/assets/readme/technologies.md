@@ -1,4 +1,21 @@
-## Technologies Utilized <a name="technologies"></a> | [#](#index)
+# Technologies Used
+
+## [Index - Return](https://github.com/plexoio/tenam/blob/main/README.md)
+
+1. [Strategy Plane - Reason, Solution and Value](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/strategy.md)
+2. [Scope Plane - Feature and Capability](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/scope.md)
+3. [Structure Plane - Content, Priority and Organization](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/structure.md)
+4. [Skeleton Plane - Layout, Interaction and Relationship](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/skeleton.md)
+5. [Surface Plane - Color, Typography, Effect and Images](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/surface.md)
+6. [Technologies Used](#technologies)
+7. [Actual Features Explained](#features)
+8. [Future Features Explained](#f-features)
+9. [Bugs & Testing Results](#bugs-testing)
+10. [Development Process](#development)
+11. [Deployment Process](#deployment)
+12. [Credits](#credits)
+
+## Technologies Used <a name="technologies"></a>
 
 Every project demands the adoption of standard procedures and a diverse range of crucial tools, and ours was no different.
 
@@ -38,6 +55,6 @@ We made use of the following technologies throughout the entire project lifespan
 
   - It is crucial to mention that we maintained responsibility during all interactions with the AI. Instead of asking the AI to solve problems for us, we sought examples of problem-solving approaches. When faced with unclear responses, we asked GPT4 to clarify specific elements to enhance our understanding.
 
-  - The project's author (myself) hosts a Spanish-language podcast where discussions around the ethics and morality of Blockchain and AI technology take place. This project provided an opportunity to apply all that knowledge.
+  - The project's author (myself) has a Spanish-language podcast episode where discussions around the ethics and morality of Blockchain and AI technology take place. This project provided an opportunity to apply all that knowledge.
 
 - **Podcast:** [Plexo Blockchain](https://podcasters.spotify.com/pod/show/plexoblockchain)

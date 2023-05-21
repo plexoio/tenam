@@ -131,14 +131,14 @@ class Google_Portfolio(object):
                 if menu_input == '1':  # Asset
                     pairs = self.assets_active[0]
                     print(separator1)
-                    print('Here you can visualize all your current crypto holdings\n')
+                    print('Here you can visualize all your current crypto holdings.\n')
                     for asset in pairs:
                         print(f'{bullet_point} {asset}')
 
                 elif menu_input == '2':  # Transaction
                     t_paris = self.transactions_active[0]
                     print(separator2)
-                    print('Last 6 transactions available in this section')
+                    print('Last 6 transactions available in this section.')
                     a = 0
                     for transaction in t_paris:
                         a += 1
@@ -163,17 +163,18 @@ class Google_Portfolio(object):
                     taxation_describe = ("Default tax value or the one you input "
                         "when updating your taxation.")
                     print(fill(taxation_describe, 80))
-                    print(f'{bullet_point} Current taxation: {taxation_data}%')
+                    print(f'\n{bullet_point} Current taxation: {taxation_data}%')
 
                 elif menu_input == '5': # Update taxation
                     print(separator5)
                     try:
+                        print('Any changes here will affect your Data Analysis section.\n')
                         input_tax = input('Input your tax duty in percentage:\n')
                         tax = int(input_tax)
                         if tax >= 0:
                             taxation = Taxation(tax, sheet)
                             taxation.assigning_tax()
-                            print('\nPlease, restart application to load '
+                            print('Please, restart application to load '
                                 'the new tax calculations!')
                         elif tax < 0:
                             print('EROR: Please, input only positve numbers!')
@@ -258,10 +259,10 @@ def login_input():
 
             if login.user_validation():
                 clear_screen()
-                print('State: Login successfully!')
+                print(f'{BOLD}State:{RESET} Login successfully!')
                 time.sleep(1)
                 clear_screen()
-                print('State: Menu loaded successfully!')
+                print(f'{BOLD}State:{RESET} Menu loaded successfully!')
                 break
         except KeyboardInterrupt:
             slow_type(" Key not accepted, please try again!")

@@ -5,7 +5,7 @@ from modules.utilities import bullet_point, slow_type, BOLD, RESET
 def welcome_users(login_func):
     while True:
         clear_screen()
-        print(f"{BOLD}TENAM{RESET}\n\nYour comprehensive crypto tracker. A dynamic\n"
+        print(f"{BOLD}WELCOME TO TENAM!{RESET}\n\nYour comprehensive crypto tracker. A dynamic\n"
               "tool for all your crypto investments in a single interface,\n"
               "no need to access each platform individually.\n\nAt present, "
               "you'll deal with static data from gspread, due to the\n"

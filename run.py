@@ -11,6 +11,7 @@ from modules.data_analysis import Data_Analysis
 from modules.transaction import Transaction
 from modules.asset import Asset
 from modules.welcome import welcome_users
+from textwrap import fill
 
 # Menu separators
 separator1 = f'\n--------------- {BOLD}ASSET SECTION{RESET} ---------------\n'
@@ -146,19 +147,22 @@ class Google_Portfolio(object):
 
                 elif menu_input == '3':  # Data Analysis
                     data_pairs = self.data_analysis_active[0]
+
                     print(separator3)
-                    print("Based on your assets, old price, new price and tax value\n"
-                    "we have analized your data for insightful retrospection\n"
-                    "and foresight regarding your holdings"
-                    )
+                    data_describe = ("Based on your assets, old price, new price and tax value, "
+                    "we have analized your data for insightful retrospection "
+                    "and foresight regarding your holdings.")
+                    print(fill(data_describe, 80))
+
                     for my_data in data_pairs:
                         print(f'{my_data}')
 
                 elif menu_input == '4':  # Actual Tax Taxation
                     taxation_data = int(self.taxation_active[0][0])
                     print(separator4)
-                    print("Default tax value or the one you input\n"
-                        "when updating your taxation\n")
+                    taxation_describe = ("Default tax value or the one you input "
+                        "when updating your taxation.")
+                    print(fill(taxation_describe, 80))
                     print(f'{bullet_point} Current taxation: {taxation_data}%')
 
                 elif menu_input == '5': # Update taxation
@@ -254,10 +258,10 @@ def login_input():
 
             if login.user_validation():
                 clear_screen()
-                print('Loading enviroment for you...')
-                time.sleep(2)
+                print('State: Login successfully!')
+                time.sleep(1)
                 clear_screen()
-                print('State: Login successful!')
+                print('State: Menu loaded successfully!')
                 break
         except KeyboardInterrupt:
             slow_type(" Key not accepted, please try again!")

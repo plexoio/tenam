@@ -1,15 +1,20 @@
 from modules.utilities import clear_screen
 import time
 from modules.utilities import bullet_point, slow_type, BOLD, RESET
+from textwrap import fill
 
 def welcome_users(login_func):
     while True:
         clear_screen()
-        print(f"{BOLD}WELCOME TO TENAM!{RESET}\n\nYour comprehensive crypto tracker. A dynamic\n"
-              "tool for all your crypto investments in a single interface,\n"
-              "no need to access each platform individually.\n\nAt present, "
-              "you'll deal with static data from gspread, due to the\n"
-              "sensitive nature of project delivery on GitHub.")
+        brand = f"{BOLD}WELCOME TO TENAM!{RESET}\n"
+        welcome = (
+           "Your comprehensive crypto tracker. A dynamic "
+           "tool for all your crypto investments in a single interface, "
+           "no need to access each platform individually. At present, "
+           "you'll deal with static data from gspread, due to the "
+           "sensitive nature of project delivery on GitHub.")
+        print(brand)
+        print(fill(welcome, 80))
         try:
             enter = input(
                 f'\n{bullet_point} Input "Y" to enter:\n')

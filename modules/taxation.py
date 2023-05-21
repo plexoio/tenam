@@ -19,6 +19,8 @@ class Taxation(object):
         '''
         print('Data uploading to server...')
         self.to_tax.update('A2', self.tax)
+        time.sleep(1)
+        clear_screen()
         print('Data uploaded to server successfully!')
         time.sleep(2)
         clear_screen()

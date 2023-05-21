@@ -36,19 +36,24 @@
         // Set focus in the terminal
         document.getElementsByClassName("xterm-helper-textarea")[0].focus();
     </script>
+
+    <!-- Author's code to inform users about the app scope-->
+    <!-- Remember that <p> cannot be child of ul for semantic purposes-->
     <div id="app-info">
+        <p>
+            The current iteration of Tenam fetches and posts dummy data to Google Sheets for the following:
+        </p>
         <ul>
-            <p>
-                The current iteration of Tenam fetches and post dummy data to Google Sheets for the following:
-            </p>
             <li>Assets</li>
             <li>Transactions</li>
             <li>Data Analysis</li>
             <li>Taxation</li>
+        </ul>
 
-            <p>
-                It dynamically processes the following:
-            </p>
+        <p>
+            It dynamically processes the following:
+        </p>
+        <ul>
             <li>Taxation update</li>
             <li>Tax Analysis</li>
             <li>Profit foresight</li>
@@ -56,4 +61,5 @@
             <li>RSS News</li>
         </ul>
     </div>
+
 </body>

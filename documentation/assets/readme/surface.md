@@ -23,6 +23,8 @@ At the outset, we didn't fully appreciate the significance of adhering to the UX
 
 As our project continues to evolve and take shape, we're enthusiastic about the progress and refinements we'll be making.
 
+![Skeleton image](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/skeleton.gif)
+
 ### Color
 
 - The 'Code Institute' template provided the default colors.

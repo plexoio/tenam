@@ -17,13 +17,13 @@
 
 ## Strategy Plane <a name="strategy-plane"></a> | 
 
-Drawing upon years of personal experience and extensive local market research, we've discerned that the majority of people desire a seamless and secure way to access and manage their crypto assets. They want this without the need for intricate authentication, and without risking their account integrity, regardless of the crypto platform hosting their assets.
+Drawing upon years of personal experience and extensive local market research, we've discerned that the majority of people desire a `s`eamless` and `secure way` to access and manage their crypto assets. They want this without the need for intricate authentication, and without risking their account integrity, regardless of the crypto platform hosting their assets.
 
-Tenam is our answer to this need. We've designed it to fetch, display, and analyze crypto asset information directly from these platforms.
+Tenam is our answer to this need. We've designed it to fetch, display, update and analyze crypto asset information.
 
-In this initial iteration, we've opted for a simpler approach by focusing solely on data originating from Google Sheets, rather than integrating with platforms like Binance or Coinbase. However, this phase is crucial as it lays the foundational groundwork for what is to become a fully operational crypto portfolio tracker.
+In this `initial iteration`, we've opted for a simpler approach by focusing solely on data originating from Google Sheets, rather than integrating with platforms like `Binance` or `Coinbase`. However, this phase is crucial as it lays the foundational groundwork for what is to become a fully operational crypto portfolio tracker.
 
-Our focus is the data originating from Google Sheets. We're treating it as we would data from any other crypto platform - manipulating and presenting it in a user-friendly `command-line interface`, courtesy of XXX.
+Our focus is the data originating from Google Sheets. We're treating it as we would data from any other crypto platform - manipulating and presenting it in a user-friendly `command-line interface` template, courtesy of [Code Institute](https://github.com/Code-Institute-Org/p3-template).
 
 Our insights are grounded in thorough research, as substantiated by the accompanying table and graphic:
 
@@ -60,7 +60,7 @@ The `Login` and `Welcome` features are definitely crucial, receiving a perfect s
 
 Similarly, the `Add, Delete, and Update` features also scored 5 out of 5. These features allow users to interact with the application beyond just inputting data.
 
-On the other hand, the "taxation" and "RSS information" features scored the lowest. Considering our ambition, we initially believed it would not be possible to include one or both of these features in this iteration as they are not critical at the moment. However, we have managed to successfully add them to this MVP.
+On the other hand, the `taxation`, `update taxation` and `RSS information` features scored the lowest. Considering our ambition, we initially believed it would not be possible to include one or all of these features in this iteration as they are not critical at the moment. However, `we have managed to successfully add them to this MVP`.
 
 Features that scored 4 or above, such as `Transaction History`, will definitely be included. However, if a feature scored 3 in viability, it means that it may not be as advanced, at least for now.
 

@@ -68,7 +68,7 @@ class Google_Portfolio(object):
         '''
         # RSS local variables
         feed = feedparser.parse(url)
-        top = feed.entries[:2]
+        top = feed.entries[:3]
         x = 0
 
         for news in top:

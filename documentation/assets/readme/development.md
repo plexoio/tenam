@@ -25,7 +25,7 @@ We used Visual Studio, Git Bash, and GitHub for coding and version control, enab
 
 - We ensured from the outset that we were using industry-standard ways of structuring our directory and naming our files.
 
-- We updated all directory references in the code, changing them from absolute to relative directories to ensure interoperability during deployment.
+- We updated all directory references in the code, changing them from absolute to relative directories to ensure interoperability during deployment
 
 - We optimized images and code using tools such as W3C, a screen reader, and GT-matrix, testing the site on various devices.
 

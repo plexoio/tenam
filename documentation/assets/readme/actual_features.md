@@ -15,68 +15,62 @@
 11. [Deployment Process](#deployment)
 12. [Credits](#credits)
 
-## Actual Features Explained<a name="features"></a>
+## Current Features <a name="features"></a>
 
-We were very satified with the results even though we thought we did not have time to fulfill our plans. At the end we only can say that all features should be developed further in the future and that for this iteration the simpliest design goes to, the ability to add, delete and update, calculations based on deposits and withdrawals, general caltulations, coin filtering (future implementation) and assets foresight and retrospection
+We are quite pleased with our achievements, despite initial concerns about time constraints. Reflecting on the project, it's evident that all features can be enhanced and further developed in the future. This iteration has simplified design elements and provides functionalities such as adding, deleting, and updating assets, performing calculations based on deposits and withdrawals, general computations, and coin filtering (planned for future implementation). It also enables assets foresight and retrospection.
 
-The following features were essential for our MVP:
+The following features proved essential for our Minimum Viable Product (MVP):
 
 ## Index.html
 
 ### Mockup command-line interface
 
-What we have developed furthur around the interface, like the background color and the info section under it was not really a requiremente for the project but we thought it necessary to add. Therefore, in this section we will only speak about the features that happen inside the command line.
+We went above and beyond with the development of the interface, adding components such as background color and an info section, even though they weren't strict requirements. In this section, we'll focus on the features within the command-line interface.
 
 #### Welcome Section
 
-The welcome section holds an informative section to tell the user
-s where they are and what are the next steps to follow, an input takes place to assure the user is a human and not a robot.
+The welcome section provides useful information about user location and the subsequent steps. It also incorporates an input field to verify the user's human identity.
 
 ![Welcome section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/welcome.png)
 
 #### Login Section
 
-The login section tells the users again where they are and what steps they can follow, we have provided them with important login information to test the app. As seen from the image below the login input can be validate or handle errors.
+In the login section, users receive further guidance on navigation and can test the app with provided login information. The login input handles validation and error management, as shown below.
 
 ![Login section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/login.png)
 
 #### Menu Section
 
-The menu is the powerful section of the app the portal to all the main features, displaied as list and accesible with an input, it keeps bwing interactice, userfriendly and enjoyable to use.
-
-By simply inputting a number users can be visit the various internal features to understand their crypto portfolio.
+The menu is the core of the app, providing access to all main features. It's displayed as a list, making it interactive, user-friendly, and enjoyable. By simply inputting a number, users can explore various internal features and gain insights into their crypto portfolio.
 
 ![Menu section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/menu.png)
 
-#### Fiat Swap
+#### Assets section
 
-The fiat swap feature is designed to be simple and user-friendly, while also hiding the underlying technology from users. Currently, it is capable of handling some conversions using Javascript for demonstration purposes.
+This section reveals part of the underlying technology. Here, users can see their current balances and crypto holdings. Based on this data, the system's algorithm generates helpful data analysis for guiding investment decisions.
 
-The feature allows users to swap numbers and update balances. Most buttons within this section are interactive in some way or another, enhancing the user experience.
+![Asset section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/asset.png)
 
-Don't forget to give the switching button a try!
+#### Transaction section
 
-![Fiat](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/fiat.png)
+This section demonstrates a realistic setting with dummy data. It showcases deposits, withdrawals, and relevant Blockchain metadata such as currency, status, and TxID.
 
-#### Crypto Swap
+![Transaction section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/transaction.png)
 
-The crypto section functions similarly to the swap section, but it is connected to a Blockchain and will always try to call Metamask to fetch numbers and process transactions.
+#### Data Analysis Section
 
-While both the fiat and crypto sections are for demonstration purposes, they showcase important interactivity.
+The Data Analysis section showcases the app's capabilities. It uses an algorithm to provide user-specific feedback based on their holdings and market trends, and also initiates tax calculations. 
 
-Don't forget to give the switching button a try!
+This section presents data processed in the background, embodying the essence of technology—an application that solves real-world problems. Note the last bullet point, which informs users if their crypto investment is resulting in a win or a loss. All profit calculations consider taxes, saving users from additional computations.
 
-![Crypto](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/crypto.png)
+![Data Analysis Section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/data_analysis.png)
 
-#### Footer
+#### Taxation section
 
-At the final part of the index.html, we have our footer. Users can also find it on the contact.html page. The footer features the primary color of the project and is also sticky, meaning it will stay visible even when the user scrolls down the page. It contains important information, like a crypto widget, links to social media accounts, and copyright information. 
+The Taxation section is integral to our application, given the importance of tax planning in financial investment. It transparently displays the default tax percentage, which can be updated as shown in the next section. All calculations are based on this percentage, ensuring users receive comprehensive insights into their net profit after tax, thereby aiding them in making informed investment decisions.
 
-![footer](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/footer.png)
+![Taxation Section](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/taxation.png)
 
-### contact.html
-
-In this section, we planned a more sophisticated contact form that would have been even more interactive using Javascript. However, due to the lack of time, we were not able to implement it. Let's consider it part of the `Future Implementation`.
 
 #### Welcome Page
 

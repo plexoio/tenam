@@ -64,10 +64,12 @@ class Data_Analysis(object):
             tax_pay = int(new_price * taxation_data / 100)
             new_earn = new_price - tax_pay - old_price
 
-            if new_earn <= 0: 
+            if new_earn < 0: 
                 final_lost = f'\n{bullet_point} {BOLD}At LOSS with:{RESET} {new_earn}$'
-            elif new_earn >= 0:
+            elif new_earn > 0:
                 final_lost = f'\n{bullet_point} {BOLD}At WIN with:{RESET} {new_earn}$'
+            else:
+                final_lost = f'\n{bullet_point} {BOLD}Profit neutrality:{RESET} {new_earn}$'
 
             actual_foresight = int(new_price * 40 / 100 + new_price)
             future_tax = int(actual_foresight * 10 /100)

@@ -72,7 +72,7 @@ class Google_Portfolio(object):
 
         for news in top:
             x += 1
-            print(f'\n{BOLD}RSS News {x}{RESET}\n')
+            print(f'\n{BOLD}Coindesk RSS News {x}{RESET}\n')
 
             # Title
             title_lines = textwrap.wrap(news.title, width=70)
@@ -159,7 +159,7 @@ class Google_Portfolio(object):
                     print(separator4)
                     print("Default tax value or the one you input\n"
                         "when updating your taxation\n")
-                    print(f'{bullet_point} Your tax responsability value is: {taxation_data}%')
+                    print(f'{bullet_point} Current taxation: {taxation_data}%')
 
                 elif menu_input == '5': # Update taxation
                     print(separator5)
@@ -171,8 +171,8 @@ class Google_Portfolio(object):
                             taxation.assigning_tax()
                             print('\nPlease, restart application to load '
                                 'the new tax calculations!')
-                        else:
-                            print('Only positve numbers!')
+                        elif tax < 0:
+                            print('EROR: Please, input only positve numbers!')
                     except ValueError:
                         slow_type(f'\n"{input_tax}" input not correct, please try again!')
                     except KeyboardInterrupt:

@@ -25,7 +25,7 @@ Please note that this current iteration is not available for public deployment; 
 - **Google Sheet**: [Portfolio](https://docs.google.com/spreadsheets/d/1IEaXqnPewHWOS8JB6kf074AWygVKgqplSE1WjHs-T28/edit?usp=sharing)
 
 
-## [Index - Return](https://github.com/plexoio/tenam/blob/main/README.md)
+## [HOME | Return](https://github.com/plexoio/tenam/blob/main/README.md)
 
 1. [Strategy Plane - Reason, Solution and Value](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/strategy.md)
 2. [Scope Plane - Feature and Capability](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/scope.md)

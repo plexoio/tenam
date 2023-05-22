@@ -21,7 +21,7 @@ As with any software development process, we encountered several challenges and 
 
 The results of our testing have been satisfactory, as illustrated in the following analysis.
 
-### Bugs
+- ### Bugs
 
 #### a) Website Performance
 
@@ -55,7 +55,7 @@ Sometimes, users might encounter an error indicating that our app does not exist
 
 For other potential bugs, we recommend refreshing the page or clearing cache files. Any problem encountered is unlikely to stem from the Tenam project; it may instead be related to third-party issues or specific settings and capabilities of the user's device.
 
-### Testing
+- ### Testing
 
 To ensure the high quality of our application, we conducted rigorous testing throughout the development process. This involved leveraging the CI Python Linter by Code Institute, Lighthouse, GT-Metrix, and the Google Console to obtain a variety of insights. The results were highly satisfactory.
 
@@ -89,7 +89,7 @@ We refreshed the page multiple times to simulate connection errors but none occu
 
 In the current iteration, we did not design the app to be responsive due to time constraints. However, enhancing responsiveness will be a priority in future updates.
 
-### Security
+- ### Security
 
 As we've noted before, this iteration uses only dummy data. Users are provided with a test username and password, eliminating the need to input personal information. The integrity of user data remains uncompromised. Even the Google Spreadsheet updates are accessible and transparent, particularly for the `Taxation` and `Data Analysis` sections.
 

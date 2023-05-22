@@ -15,6 +15,8 @@
 11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
+## Credits to:
+
 - **Brian O'Hare**: for mentoring me two times on this project. Without him, it would not have been possible with this tight timeframe.
 - **[Crypto Widget](https://www.cryptohopper.com/)**: for providing the Crypto Widget on top of the page.
 - [stackoverflow.com](https://stackoverflow.com/): for in-depth consultation and checking user-created content (from experienced developers) or human opinion.

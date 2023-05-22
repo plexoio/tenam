@@ -30,7 +30,7 @@ We used Gitpod as our `Integrated Development Environment (IDE)` for this projec
 - Coding challenges, errors, and general frustrations were tackled with patience, thorough research, and diligent study. We made use of the debugging tools available and availed tutoring services from the Code Institute.
 
 - Along the way, we came to appreciate the importance of modules, libraries, and other dependencies, such as Google Sheets and Google Drive, as well as simpler ones like 'import time' or 'import os'.
-    - 
+
 - In our project, we utilized the following Python libraries and modules:
 
     - `import time`: This module provides various time-related functions. It is used for introducing pauses in the execution of the program, which is useful for creating better user-friendly interactions.

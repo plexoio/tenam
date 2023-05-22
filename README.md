@@ -20,9 +20,9 @@ Please note that this current iteration is not available for public deployment; 
 
 ![Responsive Mockup image](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/mockup.png)
 
-- **Preview Link:** [Tenam](https://tenam-crypto.herokuapp.com/)
+- **Preview Link**: [Tenam](https://tenam-crypto.herokuapp.com/)
 
-- **Google Sheet** [Portfolio](https://docs.google.com/spreadsheets/d/1IEaXqnPewHWOS8JB6kf074AWygVKgqplSE1WjHs-T28/edit?usp=sharing)
+- **Google Sheet**: [Portfolio](https://docs.google.com/spreadsheets/d/1IEaXqnPewHWOS8JB6kf074AWygVKgqplSE1WjHs-T28/edit?usp=sharing)
 
 
 ## [Index - Return](https://github.com/plexoio/tenam/blob/main/README.md)
@@ -35,7 +35,7 @@ Please note that this current iteration is not available for public deployment; 
 6. [Technologies Used](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/technologies.md)
 7. [Actual Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/actual_features.md)
 8. [Future Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/future_features.md)
-9. [Bugs & Testing Results](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/bugs_testing.md)
+9. [Bugs, Testing & Security](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/bugs_testing.md)
 10. [Development Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
 11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)

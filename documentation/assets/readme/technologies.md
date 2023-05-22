@@ -10,7 +10,7 @@
 6. [Technologies Used](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/technologies.md)
 7. [Actual Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/actual_features.md)
 8. [Future Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/future_features.md)
-9. [Bugs & Testing Results](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/bugs_testing.md)
+9. [Bugs, Testing & Security](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/bugs_testing.md)
 10. [Development Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
 11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
@@ -30,6 +30,7 @@ We made use of the following technologies throughout the entire project lifespan
 - **[Python Tutur](https://pythontutor.com/)**: For debugging and to understand how the code works.
 - **[Slack Community](https://slack.com/)**: Community created by Code Institute for coding issues and course management.
 - **[Calendly](https://calendly.com/)**: To control mentor's appointments
+- **[Google Cloud Console](https://console.cloud.google.com/)**: To manage our APIs and services, such as authentication for Google Drive and Google Sheets.
 - **[Google Sheets](https://docs.google.com/spreadsheets/u/0/)**: To store, fetch and update data from the app
 - **[Google Translate](https://translate.google.com/)**: To improve English content
 - **Google Developer Tools**: Employed for comprehensive testing and debugging.

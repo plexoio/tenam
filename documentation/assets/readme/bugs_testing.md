@@ -1,91 +1,85 @@
-## Bugs & Testing
+## Bugs, Testing & Security
 
-As with any project, there may be some bugs that we have encountered. Here are some of the issues we've come across:
+As with any software development process, we encountered several challenges and bugs during the development of our app. Despite these hurdles, we're proud to have effectively addressed them all.
 
-#### a) Website is too slow
+The results of our testing have been satisfactory, as illustrated in the following analysis.
 
-We tried our best to keep everything on a single page, making a powerful web application that works efficiently on every device. However, we cannot guarantee that it will work the same on devices with low memory or processing capacities.
+### Bugs
 
-#### b) Metamask not working
+#### a) Website Performance
 
-Currently, Metamask is installed and partially working as expected, although there is a true feature installed. Once it is connected properly to the site, no issues should be found. For the rest, make sure you have allowed Metamask to login.
+Our project is deployed on Heroku and fetches information from Google Drive and Spreadsheet systems. Given that these cloud-based systems operate with a limited quota, we cannot guarantee that the site will always be available or perform optimally. However, it's important to note that this issue is not directly linked to our application.
 
-#### c) Footer widget not seen
+#### b) App Loading Issues
 
-The footer widget is a third-party widget, as seen in our credits section and technologies used. It may not load sometimes, but it does not mean it is not currently working; it could be due to network issues.
+We occasionally encountered a problem where our code wasn't running correctly despite the template loading flawlessly, as seen in the image below.
 
-#### d) The balances return to the original state after refreshing the page
+After attempting several solutions, we found that the issue was probably related to our Github page, which wasn't necessary for deployment. We deactivated it, deleted our app from Heroku, and re-deployed it from scratch. Surprisingly, this strategy resolved our `Websocket` connection error.
 
-This is normal and expected since the accounts created are for showcasing the power of the project.
+![Websocket error](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/web.png)
 
-#### e) Social media issue
+#### c) Screen Clearing Function
 
-Currently, social media buttons only point to the main pages for demonstration purposes.
+Our screen clearing function, which uses the 'os' import, didn't work as expected on the deployed command-line. It didn't clear all the information as it does in the IDE terminal. Despite trying various solutions, we encountered the same result.
 
-#### Other bugs
+We addressed this by transforming the functionality into a `refresh` feature and added separation lines for each feature.
 
-For other related bugs, we recommend always refreshing the page or deleting cache files. The problem is not with the tenam project; it could be related to third-party issues or related to your own device settings and capabilities.
+#### d) KeyboardInterrupt Issues
 
-## Testing
+We noticed that some keyboard inputs were not accepted immediately after deployment. We implemented a try/except clause to catch the error, print a message to the user, and allow the app to continue running.
 
-We have tested our site for accessibility, Javascript, HTML & CSS validation, performance on GT-metrix, and responsiveness.
+This solution works perfectly so far. However, we are aware that there may be less common keyboard inputs that could present problems, which we plan to address in future iterations.
 
-We also ran a check with Google Chrome's integrated Lighthouse devtool and found a few errors, which were fixed accordingly. These included improving the aria-label. Surprisingly, the accessibility of the site was great!
+#### e) Heroku App Availability
 
-During the development process, we constantly tested to ensure that we delivered a great final product. After the development process and deployment, we conducted the following tests:
+Sometimes, users might encounter an error indicating that our app does not exist on Heroku. Refreshing the page typically resolves this issue and restores the connection. It's a rare occurrence, but it's one we've noted.
 
-#### Accessibility
+#### Other Bugs
 
-We used a Screen Reader created by Google to test our site's accessibility. As a result, we improved the aria-label of some features. Our Lighthouse devtools test results for accessibility were as follows:
+For other potential bugs, we recommend refreshing the page or clearing cache files. Any problem encountered is unlikely to stem from the Tenam project; it may instead be related to third-party issues or specific settings and capabilities of the user's device.
 
-![Accessibility results](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/access.png)
+### Testing
 
-#### HTML & CSS Validation
+To ensure the high quality of our application, we conducted rigorous testing throughout the development process. This involved leveraging the CI Python Linter by Code Institute, Lighthouse, GT-Metrix, and the Google Console to obtain a variety of insights. The results were highly satisfactory.
 
-We used the official W3C Markup Validation Service to test our site's HTML and CSS. We found just five common errors on each page, and they were already solved. Therefore, the site shows the following results:
+#### CI Python Linter by Code Institute
 
-##### index.html and contact.html
+Adhering to PEP8 standards 100% of the time can be challenging. Therefore, we regularly used the CI Python Linter during development. This tool was invaluable in maintaining code structure and enhancing the overall presentation.
 
-![HTML validation](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/html.png)
+![Linter](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/linter.png)
 
-#### GT-metrix Performance
+#### Lighthouse
 
-After using GT-Metrix we realized that our site is doing quite well with an 88% in performance. We took their suggestions on improving cached files by adding our `.htaccess` with the necessary values.
+Lighthouse provided analysis across several facets of our application. Although not mandatory, we complemented its use with GT-Metrix to ensure the delivery of a quality product. The results met our expectations.
+
+![Light House](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/lighthouse.png)
+
+#### GT-Metrix
+
+With its unique strengths, GT-Metrix was an essential part of our testing process. It provided us with valuable suggestions, all of which were deemed non-critical for this iteration. The app is functioning well and ready for delivery.
+
+![GT-metrix](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/gtmetrix.png)
+
+#### GT-Metrix Performance
+
+GT-Metrix helped us realize our site's performance stands at a solid 88%. We took their suggestions on improving cache files into consideration and updated our `.htaccess` file accordingly.
 
 ![GT-metrix Result](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/gtmetrix.png)
 
-#### CSS Validation
+#### Google Console
 
-This test represents all the .css files `style.css`, `contact.css`, `swap.css` and `media.css` queries. Since we were constantly testing our CSS, the result was as follows:
+Google Console played a pivotal role in diagnosing and resolving our websocket connection bug. During the final testing phase, we monitored the console while running the app to detect any potential errors. The results were excellent - no errors occurred and the app ran smoothly.
 
-![CSS Validation](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/css.png)
+We refreshed the page multiple times to simulate connection errors but none occurred, confirming the app's robustness.
 
-- Note: it does not mean the CSS is perfect.
+![Google Console](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/console.png)
 
 #### Responsiveness
 
-We ran manual tests on different devices to ensure that our media queries were working 100%. We made final improvements to it, and now we believe it's suitable for most screen sizes. Here is the insight shot:
+In the current iteration, we did not design the app to be responsive due to time constraints. However, enhancing responsiveness will be a priority in future updates.
 
-![Responsive Mockup image](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/responsive.png)
+### Security
 
+As we've noted before, this iteration uses only dummy data. Users are provided with a test username and password, eliminating the need to input personal information. The integrity of user data remains uncompromised. Even the Google Spreadsheet updates are accessible and transparent, particularly for the `Taxation` and `Data Analysis` sections.
 
-#### Security
-
-Our site is semi-static, and we have used heavily Javascript, HTML, and CSS.
-
-To improve security, we have added the `rel attribute` to compromising anchors such as social media links or third-party services, especially those with user-generated content.
-
-Here are the values we have used as an example in action:
-
-`rel="author noopener noreferrer nofollow"`
-
-
-- **Author:** This value is used to indicate that the current document belongs to the linked author or is related to them. It is often used in blog posts or articles, where the author's name and a link to their bio or website is included.
-
-- **Noopener:** This value prevents the new page from being able to access the `window.opener` property of the current page, not allowing a gap of access to both directions, the origin and destination, either could be malicious, which can help protect against malicious attacks.
-
-- **Noreferrer:** This value instructs the browser not to send the Referer header (which includes a bunch of private data) to the linked page, which can help protect user privacy.
-
-- **Nofollow:** This value tells search engines not to follow the link, which can help prevent spam and malicious links from affecting a website's search engine rankings. It tells the search engines or target system that the origin website mentions this link but does not endorse it, and it should not trust it or even mention it.
-
-`Noopener` and `noreferrer` values are often used together to provide enhanced security and privacy when opening links in a new tab or window.
+- Our commitment to privacy and security extends to the handling of sensitive files. Thus, we've included our 'creds.json' file in our '.gitignore' to prevent it from being publicly accessible.

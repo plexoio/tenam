@@ -15,7 +15,7 @@
 11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
-## Skeleton Plane <a name="skeleton-plane"></a>
+## Skeleton Plane
 
 Tenam cryptoportfolio tracker is our first real backend project ever built. It has presented a challenge throughout the journey, but with gratifying results. We have collected fragments from various sources, much like ascending a mountain. We have carefully selected and refined these pieces from the `strategy plane to this current plane`, analyzing and `extrapolating` essential data, steps, features, and functionalities. We have also implemented different technologies, skills, and knowledge.
 

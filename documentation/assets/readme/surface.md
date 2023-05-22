@@ -15,7 +15,7 @@
 11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
-## Surface Plane <a name="surface-plane"></a>
+## Surface Plane
 
 At this juncture, we had no need for wireframes or extensive front-end discussions since the 'Code Institute' readily provided these as noted and tagged on the strategy plane. We worked within the ideas and constraints the provided framework offered.
 

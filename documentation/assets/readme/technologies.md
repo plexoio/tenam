@@ -15,7 +15,7 @@
 11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
-## Technologies Used <a name="technologies"></a>
+## Technologies Used
 
 Every project demands the adoption of standard procedures and a diverse range of crucial tools, and ours was no different.
 

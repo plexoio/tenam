@@ -15,7 +15,7 @@
 11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
-## Current Features <a name="features"></a>
+## Current Features
 
 We are quite pleased with our achievements, despite initial concerns about time constraints. Reflecting on the project, it's evident that all features can be enhanced and further developed in the future. This iteration has simplified design elements and provides functionalities such as adding, deleting, and updating assets, performing calculations based on deposits and withdrawals, general computations, and coin filtering (planned for future implementation). It also enables assets foresight and retrospection.
 

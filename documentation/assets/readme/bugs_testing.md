@@ -93,4 +93,4 @@ In the current iteration, we did not design the app to be responsive due to time
 
 As we've noted before, this iteration uses only dummy data. Users are provided with a test username and password, eliminating the need to input personal information. The integrity of user data remains uncompromised. Even the Google Spreadsheet updates are accessible and transparent, particularly for the `Taxation` and `Data Analysis` sections.
 
-- Our commitment to privacy and security extends to the handling of sensitive files. Thus, we've included our 'creds.json' file in our '.gitignore' to prevent it from being publicly accessible.
+    - Our commitment to privacy and security extends to the handling of sensitive files. Thus, we've included our 'creds.json' file in our '.gitignore' to prevent it from being publicly accessible.

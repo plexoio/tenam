@@ -1,70 +1,36 @@
-## Development Process <a name="development"></a> | [#](#index)
+# DEVELOPMENT PROCESS
 
-We created two `.html` pages, four `.css` files, and six `.js` files, along with a vendor folder, an assets folder, a documentation folder, a vendor folder, and an `.htaccess` file for improved caching. Additionally, we have a `README.md` file.
+## [HOME | Return](https://github.com/plexoio/tenam/blob/main/README.md)
 
-Throughout the development process, we utilized a user-centered design approach inspired by Jesse James Garrett. We focused on the problem rather than the solution on the `strategy` plane, determining what we wanted to build and preparing our scope.
+1. [Strategy Plane - Reason, Solution and Value](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/strategy.md)
+2. [Scope Plane - Feature and Capability](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/scope.md)
+3. [Structure Plane - Content, Priority and Organization](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/structure.md)
+4. [Skeleton Plane - Layout, Interaction and Relationship](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/skeleton.md)
+5. [Surface Plane - Color, Typography, Effect and Images](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/surface.md)
+6. [Technologies Used](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/technologies.md)
+7. [Actual Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/actual_features.md)
+8. [Future Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/future_features.md)
+9. [Bugs, Testing & Security](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/bugs_testing.md)
+10. [Development Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
+11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
+12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
-Based on deadlines and available resources, we determined what we could accomplish on the `scope` plane. We created a minimum viable product (MVP) with some desired functionalities yet to be implemented. This first iteration serves as a presentation to showcase a Web3 financial web app, demonstrating to clients that the financial institution has started building a related product.
+## Development Process
 
-We put in extra effort to code better on the `structure` plane, defining content, folder distribution, user interactions, feature locations, and user navigation. We gave form to our ideas on the `skeleton` plane, designing our wireframe using Adobe XD, and deciding what could be improved and what was already fantastic.
+Our crypto portfolio tracker application was developed primarily using Python. The Python code was then adapted to a `mockup command-line terminal` template designed by the Code Institute. While it wasn't a requirement, we opted to style this template to make necessary improvements. Additionally, we've divided our README.md files into distinct sections, which facilitates easy navigation on Github.
 
-We established colors, fonts, elements, and content on the `surface` plane, defining everything that users could see in the system. Each plane is related to the others, and the surface is the final projection of our work.
+Throughout the development process, we strongly adhered to the `user-centered design` approach inspired by Jesse James Garrett, despite this being a backend project. This approach was successful, mainly because we were creating an application for users, not solely for computer interaction. In the 'strategy' phase, we focused on the problem rather than the solution, determining what we wanted to build and laying out our scope accordingly.
 
-We faced several challenges during the planning, documentation, and coding processes, but with patience and perseverance, we found a solution for each one.
+The development process was both `fascinating and challenging`, as we had to learn Python and implement our knowledge simultaneously. Fortunately, we had the support of the Code Institute. From the environment setup, template installation, to Heroku deployment, we navigated each step with guidance.
 
-In future iterations, we plan to develop the `index` and `contact` pages further, particularly the `index` with the `Metamask Login`.
+We used Gitpod as our `Integrated Development Environment (IDE)` for this project, which allowed us to constantly test our code through the terminal and push changes to Github with ease.
 
-We are satisfied with our first iteration of tenam, as users learn about this emerging technology and the financial institution informs them about upcoming developments. Radical changes are not always positive, so building and deploying this project was an excellent idea.
+- Throughout the journey, we paid close attention to our documentation, which significantly eased our development process.
 
+- Coding challenges, errors, and general frustrations were tackled with patience, thorough research, and diligent study. We made use of the debugging tools available and availed tutoring services from the Code Institute.
 
-## Deployment Process <a name="deployment"></a> | [#](#index)
+- Along the way, we came to appreciate the importance of modules, libraries, and other dependencies, such as Google Sheets and Google Drive, as well as simpler ones like 'import time'.
 
-We used Visual Studio, Git Bash, and GitHub for coding and version control, enabling us to deploy our product quickly once it was completed.
+- Lastly, we carried out necessary testing and managed to resolve a few errors without major complications.
 
-- We made sure to have secure backups of the site, not relying solely on the GitHub repository but also creating structured backups on external hard disks.
-
-- We ensured from the outset that we were using industry-standard ways of structuring our directory and naming our files.
-
-- We updated all directory references in the code, changing them from absolute to relative directories to ensure interoperability during deployment
-
-- We optimized images and code using tools such as W3C, a screen reader, and GT-matrix, testing the site on various devices.
-
-- After confirming that the README.md was up to date, we opened GitHub Pages for our product. The setup process was straightforward:
-
-1. Go to your repository.
-2. Click on the settings button.
-3. Go to the left navbar and select `Code and automation`.
-4. Click on `Pages`.
-5. Select `deploy from a branch`.
-6. Choose `Branch` and then `/root`, and click on `Save`.
-7. Wait for 1 to 5 minutes, then refresh your page.
-8. On top of that section, you will see the link to your GitHub Pages.
-
-In this way, we were able to deploy our project successfully with no major issues. For more information, please refer to the other sections and subsections of this README.md file.
-
-<hr>
-
-## Credits <a name="credits"></a> | [#](#index)
-
-- **Brian O'Hare**: for mentoring me two times on this project. Without him, it would not have been possible with this tight timeframe.
-- **[Metamask Login CDN](https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js)**: for sharing to the public Metamask Web3 Login.
-- **[Metamask Logo - codepen.io](https://codepen.io/shivammathur/pen/ZVJaEy)**: for provinding the Metamask Login Interactive Logo.
-- **[Crypto Widget](https://www.cryptohopper.com/)**: for providing Crypto Widget on footer.
-- [stackoverflow.com](https://stackoverflow.com/): for in-depth consultation and checking user-created content (from experienced developers) or human opinion.
-- [google.com](https://google.com): for programming queries.
-- [codeinstitute.net](https://codeinstitute.net/): for providing proper education, which knowledge is being applied throughout this project.
-- [programminghub.io](https://programminghub.io/): where I learned the basics before joining Code Institute.
-- [ChatGPT](https://chat.openai.com/chat), was used for the following queries:
-
-1. Used for quick general consulting.
-2. Used to convert a HTML code to a Markdown table for the README.md file. As seen from our extended self-coded versions: [strategy-table](https://github.com/plexoio/tenam/blob/main/documentation/extended-versions/strategy-table.html).
-3. Copywriting and proofreading.
-4. Used to validate HTML and styling codes.
-5. Used to confirm whether or not my code snippet is correct after hours of self-debugging on `Javascript`.
-
-**Note:** ChatGPT has given some false answers during some queries. We always need to question its answers.
-- To all the websites and technologies used as seen in [Technologies Used](#technologies)
-
-## Authors 
-
-- [@plexoio](https://www.github.com/plexoio) | Frank Arellano
+We highly recommend reviewing all the steps outlined in this `README section` and visiting each index entry for a more granular understanding of our development process.

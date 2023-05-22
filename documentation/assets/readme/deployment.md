@@ -1,4 +1,4 @@
-# Development Process
+# WORKSPACE SET UP & DEPLOYMENT PROCESS
 
 ## [HOME | Return](https://github.com/plexoio/tenam/blob/main/README.md)
 
@@ -15,7 +15,7 @@
 11. [Workspace Set Up & Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
-## Workspace Setup & Workspace Set Up & Deployment Process
+## Workspace Setup & Deployment
 
 We employed a variety of technologies such as Gitpod, Visual Studio Code, Git Bash, and GitHub, for coding and version control. Detailed in the `Technologies Used` section, these tools facilitated swift product deployment upon completion.
 
@@ -99,7 +99,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPE_CREDS)
 SHEET = GSPREAD_CLIENT.open('ADD-HERE-YOUR-GOOGLE-SHEET-NAME')
 ```
 
-## Workspace Set Up & Deployment Process
+## Deployment Process
 
 Because GitHub Pages doesn't support backend deployment, we'll utilize a third-party service. For this project, we're using [Heroku](https://heroku.com/), a platform where we can host and deploy our app.
 

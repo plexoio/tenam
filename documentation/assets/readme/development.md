@@ -29,7 +29,25 @@ We used Gitpod as our `Integrated Development Environment (IDE)` for this projec
 
 - Coding challenges, errors, and general frustrations were tackled with patience, thorough research, and diligent study. We made use of the debugging tools available and availed tutoring services from the Code Institute.
 
-- Along the way, we came to appreciate the importance of modules, libraries, and other dependencies, such as Google Sheets and Google Drive, as well as simpler ones like 'import time'.
+- Along the way, we came to appreciate the importance of modules, libraries, and other dependencies, such as Google Sheets and Google Drive, as well as simpler ones like 'import time' or 'import os'.
+    - 
+- In our project, we utilized the following Python libraries and modules:
+
+    - `import time`: This module provides various time-related functions. It is used for introducing pauses in the execution of the program, which is useful for creating better user-friendly interactions.
+
+    - `from getpass import getpass`: getpass is a Python module for securely handling password prompts. We used it to handle user password input securely.
+
+    - `import textwrap`: This module is used to format text output into paragraphs. It was handy for ensuring that our text output was neat and readable.
+
+    - `import feedparser`: Feedparser is a universal feed parser that is useful for reading RSS feeds. We used it for our RSS News functionality to read news from Coindesk.
+
+    - `from google.oauth2.service_account import Credentials`: This is a Google library for handling OAuth2, which is an open standard for access delegation. It was crucial for our connection with Google Sheets and Google Drive.
+
+    - `import gspread`: Gspread is a Python client for Google Sheets. It allowed us to interact with our Google Sheets data.
+
+    - `from textwrap import fill`: The fill function from the textwrap module formats text by filling paragraphs with hard line breaks.
+
+    - `import os`: This module provides functions for interacting with the operating system. It was used, for example, for handling screen clearing on the command line.
 
 - Lastly, we carried out necessary testing and managed to resolve a few errors without major complications.
 

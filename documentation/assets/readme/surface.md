@@ -1,4 +1,4 @@
-# Surface Plane
+# SURFACE PLANE
 
 ## [HOME | Return](https://github.com/plexoio/tenam/blob/main/README.md)
 

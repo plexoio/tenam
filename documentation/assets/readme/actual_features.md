@@ -1,4 +1,4 @@
-# Actual Features Explained
+# ACTUAL FEATURES EXPLAINED
 
 ## [HOME | Return](https://github.com/plexoio/tenam/blob/main/README.md)
 

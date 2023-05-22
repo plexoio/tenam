@@ -1,4 +1,4 @@
-# Technologies Used
+# TECHNOLOGIES USED
 
 ## [HOME | Return](https://github.com/plexoio/tenam/blob/main/README.md)
 

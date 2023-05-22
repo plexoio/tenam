@@ -11,7 +11,7 @@
 7. [Actual Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/actual_features.md)
 8. [Future Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/future_features.md)
 9. [Bugs, Testing & Security](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/bugs_testing.md)
-10. [Development Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
+10. [Workspace Set Up & Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
 11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
@@ -30,7 +30,7 @@ Python posed a significant challenge, particularly due to the mental strain that
 
 - As we can observe, the first items on our list are the most achievable. We plan to draft the starting points for those tagged as future implementation to ensure clarity, enhance user experience, and effectively communicate our message.
 
-- The entire development process is slated to span five days, with the initial design for future implementation not exceeding one day.
+- The entire Workspace Set Up & Deployment Process is slated to span five days, with the initial design for future implementation not exceeding one day.
 
 - In this iteration, our focus is on pragmatism to meet the requirements of both the Code Institute and the project at hand.
 

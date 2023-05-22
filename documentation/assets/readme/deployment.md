@@ -1,4 +1,4 @@
-# Workspace Set Up & Deployment Process
+# WORKSPACE SET UP & DEPLOYMENT PROCESS
 
 ## [HOME | Return](https://github.com/plexoio/tenam/blob/main/README.md)
 

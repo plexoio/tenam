@@ -77,12 +77,6 @@ With its unique strengths, GT-Metrix was an essential part of our testing proces
 
 ![GT-metrix](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/gtmetrix.png)
 
-#### GT-Metrix Performance
-
-GT-Metrix helped us realize our site's performance stands at a solid 88%. We took their suggestions on improving cache files into consideration and updated our `.htaccess` file accordingly.
-
-![GT-metrix Result](https://github.com/plexoio/tenam/blob/main/documentation/assets/img/gtmetrix.png)
-
 #### Google Console
 
 Google Console played a pivotal role in diagnosing and resolving our websocket connection bug. During the final testing phase, we monitored the console while running the app to detect any potential errors. The results were excellent - no errors occurred and the app ran smoothly.

@@ -1,4 +1,4 @@
-# WORKSPACE SET UP & DEPLOYMENT PROCESS
+# Development Process
 
 ## [HOME | Return](https://github.com/plexoio/tenam/blob/main/README.md)
 
@@ -11,15 +11,15 @@
 7. [Actual Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/actual_features.md)
 8. [Future Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/future_features.md)
 9. [Bugs, Testing & Security](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/bugs_testing.md)
-10. [Workspace Set Up & Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
-11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
+10. [Development Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
+11. [Workspace Set Up & Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
-## Workspace Setup & Deployment Process
+## Workspace Setup & Workspace Set Up & Deployment Process
 
 We employed a variety of technologies such as Gitpod, Visual Studio Code, Git Bash, and GitHub, for coding and version control. Detailed in the `Technologies Used` section, these tools facilitated swift product deployment upon completion.
 
-Below, you'll find a comprehensive outline of the entire deployment process, from the initial setup of the Code Institute template to the final deployment on Heroku:
+Below, you'll find a comprehensive outline of the entire Workspace Set Up & Deployment Process, from the initial setup of the Code Institute template to the final deployment on Heroku:
 
 ## Workspace Setup
 
@@ -99,7 +99,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPE_CREDS)
 SHEET = GSPREAD_CLIENT.open('ADD-HERE-YOUR-GOOGLE-SHEET-NAME')
 ```
 
-## Deployment Process
+## Workspace Set Up & Deployment Process
 
 Because GitHub Pages doesn't support backend deployment, we'll utilize a third-party service. For this project, we're using [Heroku](https://heroku.com/), a platform where we can host and deploy our app.
 

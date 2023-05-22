@@ -11,13 +11,13 @@
 7. [Actual Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/actual_features.md)
 8. [Future Features Explained](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/future_features.md)
 9. [Bugs, Testing & Security](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/bugs_testing.md)
-10. [Workspace Set Up & Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
-11. [Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
+10. [Development Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/development.md)
+11. [Workspace Set Up & Deployment Process](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/deployment.md)
 12. [Credits](https://github.com/plexoio/tenam/blob/main/documentation/assets/readme/credits.md)
 
 ## Bugs, Testing & Security
 
-As with any software Workspace Set Up & Deployment Process, we encountered several challenges and bugs during the development of our app. Despite these hurdles, we're proud to have effectively addressed them all.
+As with any software Development Process, we encountered several challenges and bugs during the development of our app. Despite these hurdles, we're proud to have effectively addressed them all.
 
 The results of our testing have been satisfactory, as illustrated in the following analysis.
 
@@ -57,7 +57,7 @@ For other potential bugs, we recommend refreshing the page or clearing cache fil
 
 - ### Testing
 
-To ensure the high quality of our application, we conducted rigorous testing throughout the Workspace Set Up & Deployment Process. This involved leveraging the CI Python Linter by Code Institute, Lighthouse, GT-Metrix, and the Google Console to obtain a variety of insights. The results were highly satisfactory.
+To ensure the high quality of our application, we conducted rigorous testing throughout the Development Process. This involved leveraging the CI Python Linter by Code Institute, Lighthouse, GT-Metrix, and the Google Console to obtain a variety of insights. The results were highly satisfactory.
 
 #### CI Python Linter by Code Institute
 

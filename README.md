@@ -24,6 +24,8 @@ Please note that this current iteration is not available for public deployment; 
 
 - **Google Sheet**: [Portfolio](https://docs.google.com/spreadsheets/d/1IEaXqnPewHWOS8JB6kf074AWygVKgqplSE1WjHs-T28/edit?usp=sharing)
 
+- **Username**: Tenam
+- **Password**: test123
 
 ## [HOME | Return](https://github.com/plexoio/tenam/blob/main/README.md)
 
